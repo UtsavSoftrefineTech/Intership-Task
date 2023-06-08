@@ -1,0 +1,169 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+.box1 {
+  height: 50px;
+  width: 100%;
+  background-color: gray;
+  margin-bottom: 20px;
+}
+
+.box2 {
+  height: 30px;
+  width: 50%;
+  background-color: gray;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.box3 {
+  margin-bottom: 20px;
+}
+
+.box4 {
+  float: left;
+  height: 200px;
+  width: 49%;
+  background-color: gray;
+}
+
+.box5 {
+  height: 200px;
+  width: 49%;
+  float: right;
+  background-color: gray;
+}
+
+.box7 {
+  height: 320px;
+  width: 339px;
+  float: left;
+  margin: 20px;
+  background-color: gray;
+}
+
+.box15 {
+  height: 30px;
+  width: 70%;
+  background-color: gray;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.box16 {
+  height: 420px;
+  width: 100%;
+  background-color: gray;
+  margin-bottom: 20px;
+}
+
+.box17 {
+  height: 320px;
+  width: 26%;
+  float: left;
+  background-color: white;
+  margin: 50px;
+}
+
+.box18 {
+  height: 30px;
+  width: 70%;
+  background-color: gray;
+  margin: 20px 50px;
+}
+
+.box19 {
+  height: 100px;
+  width: 70%;
+  background-color: gray;
+  margin: 20px 50px;
+}
+
+.box20 {
+  height: 100px;
+  width: 70%;
+  background-color: gray;
+  margin: 20px 50px;
+}
+
+.box21 {
+  height: 50px;
+  width: 30%;
+  background-color: gray;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.box22 {
+  height: 40px;
+  width: 45%;
+  background-color: gray;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.box23 {
+  height: 200px;
+  width: 45%;
+  background-color: gray;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.box24 {
+  width: 45%;
+  margin: auto;
+  margin-bottom: 60px;
+}
+
+.box25 {
+  float: left;
+  height: 80px;
+  width: 48%;
+  background-color: gray;
+}
+
+.box26 {
+  float: right;
+  height: 80px;
+  width: 48%;
+  background-color: gray;
+}
+
+.box27 {
+  height: 290px;
+  width: 100%;
+  background-color: gray;
+}
+
+.box28 {
+  float: left;
+  height: 250px;
+  width: 48%;
+  background-color: white;
+  margin: 20px 0px 20px 20px;
+}
+
+.box29 {
+  float: right;
+  height: 250px;
+  width: 48%;
+  background-color: white;
+  margin: 20px 20px 20px 20px;
+}
+
+.box30 {
+  height: 30px;
+  width: 60%;
+  background-color: gray;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
