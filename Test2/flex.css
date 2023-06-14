@@ -20,14 +20,13 @@ html {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: 1rem;
   background-color: aqua;
 }
 
 .box {
   display: flex;
-  height: 10rem;
-  width: 19rem;
-  margin: 5rem;
+  height: 15rem;
+  width: 15rem;
+  margin: 1rem;
   background-color: yellow;
 }

@@ -17,12 +17,12 @@ html {
 .grid-item {
   display: grid;
   place-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 2fr));
 }
 
 .box {
-  height: 10rem;
-  width: 19rem;
-  margin: 5rem;
+  height: 15rem;
+  width: 15rem;
+  margin: 1rem;
   background-color: yellow;
 }
