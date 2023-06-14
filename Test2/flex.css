@@ -1,0 +1,33 @@
+/* Box-Model Using Display Flex Property */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  background-color: aqua;
+}
+
+.box {
+  display: flex;
+  height: 10rem;
+  width: 19rem;
+  margin: 5rem;
+  background-color: yellow;
+}
