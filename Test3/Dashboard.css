@@ -1,0 +1,420 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.dashboard-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+/* hero or header part of our Dashboard  */
+
+.hero-main {
+  height: 25rem;
+  grid-column: 1 / -1;
+  position: relative;
+  background-color: rgba(220, 220, 220, 0.619);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 7rem;
+  padding: 0 4.8rem;
+}
+
+.short-header-image {
+  height: 20rem;
+  width: 24rem;
+  position: absolute;
+  left: 5rem;
+  top: 9rem;
+  border-radius: 0.1rem;
+  box-shadow: 0 0.1rem 2rem rgba(128, 128, 128, 0.388);
+}
+
+.short-header-info {
+  height: 20rem;
+  width: 35rem;
+  padding: 1rem 0 1rem 1rem;
+  position: absolute;
+  left: 30rem;
+  top: 9rem;
+}
+
+.short-header-info p {
+  padding-top: 1rem;
+  font-size: 1rem;
+  color: rgb(78, 78, 78);
+}
+
+.short-header-info p:first-child {
+  font-size: 2rem;
+  color: black;
+}
+
+.short-header-info p span {
+  color: rgb(33, 33, 33);
+}
+
+.display-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  padding: 1.5rem;
+  right: 10rem;
+  top: 12rem;
+  background-color: rgba(220, 220, 220, 0.735);
+}
+
+.display-profile-logo {
+  height: 5rem;
+  width: 6.5rem;
+}
+
+.display-profile-info p {
+  margin: 0.5rem 1rem;
+  font-size: 1.2rem;
+}
+
+.display-profile-info p:first-child {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.display-profile-info-btn {
+  padding: 0.2rem 0.5rem;
+  margin: 0.5rem 1rem;
+  background-color: rgba(33, 30, 30, 0.719);
+  border-radius: 0.4rem;
+  color: white;
+}
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+}
+
+.nav-logo {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+}
+
+.nav-btn {
+  background-color: rgba(128, 128, 128, 0.557);
+}
+
+.alert-logo {
+  height: 3rem;
+  width: 3rem;
+}
+
+.nav-image {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 1rem;
+}
+
+/* Side part of our Dashboard */
+
+.side-part {
+  height: 80rem;
+  background-color: rgba(220, 220, 220, 0.21);
+}
+
+.side-main {
+  margin-top: 6rem;
+}
+
+.side {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 3.5rem 0.1rem 3.5rem;
+}
+
+.side-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.side-logo {
+  height: 3rem;
+  width: 3rem;
+}
+
+.side-line {
+  border: 1px solid rgba(128, 128, 128, 0.751);
+  margin: 0 2.5rem 2rem 2.5rem;
+}
+
+.delivered {
+  margin: 0 3.5rem 0.1rem 3.5rem;
+}
+
+.delivered-text {
+  font-size: 1.8rem;
+  color: gray;
+}
+
+.delivered-imgs {
+  display: flex;
+  margin: 2rem 0 3rem 0;
+}
+
+.delivered-imgs img {
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+  margin-right: 1.6rem;
+  border: 3px solid #fdf2e9;
+}
+
+.details {
+  margin: 0 3.5rem 0.1rem 3.5rem;
+}
+
+.details p:nth-child(odd) {
+  color: grey;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
+.details p:nth-child(even) {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* Main part of our Dashboard */
+
+.information-main {
+  height: 80rem;
+  grid-column: 2 / -1;
+  background-color: rgba(220, 220, 220, 0.21);
+}
+
+.main-part {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-left: 2px solid rgba(128, 128, 128, 0.751);
+}
+
+.navbar {
+  grid-column: 1 / -1;
+  position: relative;
+}
+
+.navbar-part {
+  display: flex;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid rgba(128, 128, 128, 0.751);
+}
+
+.navbar-part a {
+  color: grey;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.navbar-part a:nth-child(2) {
+  color: black;
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+
+.main-part-nav-logo {
+  margin: 1.1rem 0.5rem 1rem 2rem;
+  font-size: 1.5rem;
+}
+
+.main-part-nav-link {
+  margin: 1rem 4rem 1rem 0;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: black;
+}
+
+.main-part-nav-btn {
+  padding: 1rem 3rem;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: rgba(220, 220, 220, 0.865);
+}
+
+.border-bottom {
+  width: 15rem;
+  position: absolute;
+  left: 3.4rem;
+  top: 7.8rem;
+  border-bottom: 4px solid rgba(132, 83, 4, 0.751);
+}
+
+.member-card {
+  grid-column: 1 / -1;
+}
+
+.final-card {
+  display: flex;
+  justify-content: space-around;
+  margin: 3rem 0;
+}
+
+.card {
+  display: flex;
+  background-color: rgba(242, 238, 238, 0.97);
+  width: 32rem;
+  height: 12rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  box-shadow: 0 0.1rem 2rem rgba(128, 128, 128, 0.388);
+}
+
+.count {
+  font-size: 6rem;
+  margin-right: 3rem;
+}
+
+.member-card-info {
+  display: flex;
+  flex-direction: column;
+  padding-left: 5rem;
+  border-left: 2px solid grey;
+}
+
+.member-card-info h2 {
+  font-size: 1.6rem;
+  color: grey;
+  padding: 1rem 0;
+}
+
+.card-img {
+  margin-left: 1.6rem;
+}
+
+.card-img img {
+  border-radius: 50%;
+  height: 3.5rem;
+  width: 3.5rem;
+  margin-left: -1.8rem;
+}
+
+.header-img:nth-child(4) {
+  opacity: 0.58;
+}
+
+.profile-card {
+  height: 54rem;
+  grid-column: 1 / 3;
+}
+
+.inside-profile-card {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.164);
+  margin: 2.5rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  position: relative;
+  box-shadow: 0 0.1rem 2rem rgba(128, 128, 128, 0.525);
+}
+
+.card-image {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 1rem;
+}
+
+.card-logo {
+  margin-right: 0.5rem;
+}
+
+.card-info {
+  padding-left: 1rem;
+  margin-left: 1rem;
+}
+
+.card-info > p {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin: 0.5rem 0 0.3rem 0;
+  font-weight: bold;
+}
+
+.information {
+  display: flex;
+  padding-top: 1rem;
+  color: gray;
+}
+
+.information span {
+  color: gray;
+  font-weight: 700;
+}
+
+.profile-card-btn {
+  height: 3rem;
+  width: 9rem;
+  background-color: rgba(255, 166, 0, 0.626);
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  border-radius: 0.5rem;
+}
+
+.activity {
+  background-color: rgba(220, 220, 220, 0.21);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.2rem 2rem rgba(0 0 0 / 0.1);
+  background-color: rgba(242, 238, 238, 0.205);
+  margin: 2.6rem 5rem 0 0;
+  position: relative;
+  height: 47rem;
+}
+
+.activity p:first-child {
+  color: grey;
+  font-size: 1.6rem;
+  font-weight: 300;
+  margin: 2rem 5rem 2rem 5rem;
+  border-bottom: 1px solid grey;
+  padding-bottom: 1rem;
+}
+
+.activity-info h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: black;
+}
+
+.activity-info {
+  border-left: 1px solid rgba(128, 128, 128, 0.33);
+  padding: 0 0 2.5rem 4rem;
+  margin: 0 4.5rem;
+}
+
+.activity-info p {
+  padding-top: 0.3rem;
+  font-size: 1.2rem;
+}
+
+.activity-dot {
+  height: 1rem;
+  width: 1rem;
+  background-color: rgba(214, 240, 13, 0.462);
+  position: absolute;
+  border-radius: 50%;
+  left: 4rem;
+}
