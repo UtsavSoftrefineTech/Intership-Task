@@ -6,6 +6,7 @@
 
 html {
   font-size: 62.5%;
+  font-family: sans-serif;
 }
 
 .dashboard-main {
@@ -16,10 +17,18 @@ html {
 /* hero or header part of our Dashboard  */
 
 .hero-main {
-  height: 25rem;
+  height: 27rem;
   grid-column: 1 / -1;
   position: relative;
-  background-color: rgba(220, 220, 220, 0.619);
+  background-image: linear-gradient(
+      90deg,
+      rgba(114, 114, 114, 0.9),
+      rgba(101, 101, 101, 0.651)
+    ),
+    url("https://images7.alphacoders.com/427/427849.jpg");
+  width: 98.93vw;
+  object-fit: cover;
+  color: #fff;
 }
 
 .header {
@@ -31,7 +40,7 @@ html {
 }
 
 .short-header-image {
-  height: 20rem;
+  height: 22rem;
   width: 24rem;
   position: absolute;
   left: 5rem;
@@ -46,22 +55,24 @@ html {
   padding: 1rem 0 1rem 1rem;
   position: absolute;
   left: 30rem;
-  top: 9rem;
+  top: 7rem;
 }
 
 .short-header-info p {
   padding-top: 1rem;
-  font-size: 1rem;
-  color: rgb(78, 78, 78);
+  font-size: 1.3rem;
+  color: rgba(229, 227, 227, 0.817);
 }
 
 .short-header-info p:first-child {
   font-size: 2rem;
-  color: black;
+  font-weight: 700;
+  color: white;
 }
 
 .short-header-info p span {
-  color: rgb(33, 33, 33);
+  font-weight: 500;
+  color: white;
 }
 
 .display-profile {
@@ -69,15 +80,66 @@ html {
   justify-content: center;
   align-items: center;
   position: absolute;
-  padding: 1.5rem;
-  right: 10rem;
+  padding: 0.5rem 1.2rem;
+  right: 4rem;
   top: 12rem;
-  background-color: rgba(220, 220, 220, 0.735);
+  background-color: rgba(220, 220, 220, 0.29);
 }
 
-.display-profile-logo {
-  height: 5rem;
-  width: 6.5rem;
+.circle-wrap {
+  width: 50px;
+  height: 50px;
+  background: #fefcff;
+  border-radius: 50%;
+  border: 1px solid #cdcbd0;
+}
+
+.circle-wrap .circle .mask,
+.circle-wrap .circle .fill {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle-wrap .circle .mask {
+  clip: rect(0px, 50px, 50px, 25px);
+}
+
+.circle-wrap .inside-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(220, 220, 220, 0.735);
+  line-height: 30px;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 10px;
+  color: black;
+  position: absolute;
+  z-index: 100;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.mask .fill {
+  clip: rect(0px, 25px, 50px, 0px);
+  background-color: #706b6b;
+}
+
+.mask.full,
+.circle .fill {
+  animation: fill ease-in-out 3s;
+  transform: rotate(135deg);
+}
+
+@keyframes fill {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(135deg);
+  }
 }
 
 .display-profile-info p {
@@ -91,11 +153,26 @@ html {
 }
 
 .display-profile-info-btn {
-  padding: 0.2rem 0.5rem;
+  padding: 0.5rem 1rem;
   margin: 0.5rem 1rem;
-  background-color: rgba(33, 30, 30, 0.719);
+  background-color: #706b6bc7;
   border-radius: 0.4rem;
+  border: none;
   color: white;
+}
+
+.display-camera-icon {
+  position: absolute;
+  padding: 0.3rem 1rem;
+  right: 0rem;
+  top: 10.5rem;
+  border-radius: 0.2rem;
+  background-color: rgba(220, 220, 220, 0.199);
+}
+
+.camera-icon {
+  height: 2rem;
+  width: 2rem;
 }
 
 .main-nav-list {
@@ -106,14 +183,23 @@ html {
 }
 
 .nav-logo {
-  padding: 1rem 2rem;
-  font-size: 1.5rem;
-  color: black;
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
   text-decoration: none;
 }
 
+.dashboard-logo {
+  height: 1.7rem;
+  width: 2rem;
+}
+
 .nav-btn {
-  background-color: rgba(128, 128, 128, 0.557);
+  font-size: 1.5rem;
+  padding: 1rem 1.5rem;
+  font-weight: normal;
+  border-radius: 0.3rem;
+  background-color: rgba(255, 255, 255, 0.228);
 }
 
 .alert-logo {
@@ -125,6 +211,7 @@ html {
   height: 4rem;
   width: 4rem;
   border-radius: 1rem;
+  object-fit: cover;
 }
 
 /* Side part of our Dashboard */
@@ -141,6 +228,7 @@ html {
 .side {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 0 3.5rem 0.1rem 3.5rem;
 }
 
@@ -217,8 +305,7 @@ html {
 
 .navbar-part {
   display: flex;
-  padding: 2rem;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid rgba(128, 128, 128, 0.751);
 }
@@ -229,29 +316,75 @@ html {
   font-weight: 400;
 }
 
-.navbar-part a:nth-child(2) {
-  color: black;
+.main-part-links div a {
   font-weight: bold;
   margin-left: 0.5rem;
 }
+.main-part-links div {
+  padding: 2rem 0 2rem 0;
+}
+
+.main-part-links div:first-child {
+  border-bottom: 4px solid orange;
+}
+
+.main-part-links > div a:hover {
+  border-bottom: none;
+  color: gray;
+}
+
+.main-part-links {
+  display: flex;
+}
 
 .main-part-nav-logo {
-  margin: 1.1rem 0.5rem 1rem 2rem;
   font-size: 1.5rem;
+}
+
+.main-part-btn {
+  margin-right: 4rem;
 }
 
 .main-part-nav-link {
-  margin: 1rem 4rem 1rem 0;
   font-size: 1.5rem;
+  margin-left: 2.5rem;
+  padding-top: 2rem;
   text-decoration: none;
+}
+
+.main-part-nav-link:hover {
+  /* color: yellow; */
+  border-bottom: 4px solid orange;
+}
+
+.main-part-nav-link-div {
+  margin-left: 2.5rem;
+}
+
+.main-part-nav-link-div a {
   color: black;
 }
 
+.main-part-nav-link-div a:hover {
+  text-decoration: none;
+}
+
 .main-part-nav-btn {
-  padding: 1rem 3rem;
+  height: 3.5rem;
+  width: 10rem;
   font-size: 1.5rem;
   border-radius: 0.5rem;
-  background-color: rgba(220, 220, 220, 0.865);
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(9, 159, 9, 0.669);
+}
+
+.claim-icon {
+  margin-right: 0.5rem;
 }
 
 .border-bottom {
@@ -268,16 +401,16 @@ html {
 
 .final-card {
   display: flex;
-  justify-content: space-around;
-  margin: 3rem 0;
+  justify-content: space-evenly;
+  margin: 4rem 0;
 }
 
 .card {
   display: flex;
   background-color: rgba(242, 238, 238, 0.97);
-  width: 32rem;
-  height: 12rem;
-  justify-content: center;
+  width: 29rem;
+  height: 10rem;
+  justify-content: space-evenly;
   align-items: center;
   border-radius: 2rem;
   box-shadow: 0 0.1rem 2rem rgba(128, 128, 128, 0.388);
@@ -285,14 +418,11 @@ html {
 
 .count {
   font-size: 6rem;
-  margin-right: 3rem;
 }
 
 .member-card-info {
   display: flex;
   flex-direction: column;
-  padding-left: 5rem;
-  border-left: 2px solid grey;
 }
 
 .member-card-info h2 {
@@ -300,7 +430,10 @@ html {
   color: grey;
   padding: 1rem 0;
 }
-
+.border-line {
+  height: 8rem;
+  border-left: 1px solid grey;
+}
 .card-img {
   margin-left: 1.6rem;
 }
@@ -317,14 +450,13 @@ html {
 }
 
 .profile-card {
-  height: 54rem;
   grid-column: 1 / 3;
 }
 
 .inside-profile-card {
   display: flex;
   background-color: rgba(255, 255, 255, 0.164);
-  margin: 2.5rem;
+  margin: 0rem 2.8rem 2.5rem 4.2rem;
   padding: 2rem;
   border-radius: 1rem;
   position: relative;
@@ -333,8 +465,9 @@ html {
 
 .card-image {
   height: 10rem;
-  width: 10rem;
+  width: 12rem;
   border-radius: 1rem;
+  object-fit: cover;
 }
 
 .card-logo {
@@ -366,12 +499,16 @@ html {
 
 .profile-card-btn {
   height: 3rem;
-  width: 9rem;
+  width: 7rem;
   background-color: rgba(255, 166, 0, 0.626);
   position: absolute;
   right: 2rem;
   bottom: 2rem;
   border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border: none;
 }
 
 .activity {
@@ -379,16 +516,42 @@ html {
   border-radius: 0.5rem;
   box-shadow: 0 0.2rem 2rem rgba(0 0 0 / 0.1);
   background-color: rgba(242, 238, 238, 0.205);
-  margin: 2.6rem 5rem 0 0;
+  margin: 0rem 4rem 0 1.5rem;
   position: relative;
   height: 47rem;
+}
+
+.scroll {
+  height: 47rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scroll::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+.scroll::-webkit-scrollbar-track {
+  border-radius: 20px;
+  /* box-shadow: inset 0 0 5px grey; */
+  /* margin-top: 22rem;
+  margin-bottom: 22rem; */
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background: rgba(240, 206, 14, 0.979);
+  border-radius: 10px;
+  height: 1rem;
 }
 
 .activity p:first-child {
   color: grey;
   font-size: 1.6rem;
   font-weight: 300;
-  margin: 2rem 5rem 2rem 5rem;
+  margin: 2rem 5rem 2rem 3.5rem;
   border-bottom: 1px solid grey;
   padding-bottom: 1rem;
 }
@@ -413,7 +576,6 @@ html {
 .activity-dot {
   height: 1rem;
   width: 1rem;
-  background-color: rgba(214, 240, 13, 0.462);
   position: absolute;
   border-radius: 50%;
   left: 4rem;
