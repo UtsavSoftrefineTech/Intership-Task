@@ -422,6 +422,7 @@ html {
 
 .member-card-info {
   display: flex;
+  position: relative;
   flex-direction: column;
 }
 
@@ -435,6 +436,7 @@ html {
   border-left: 1px solid grey;
 }
 .card-img {
+  display: flex;
   margin-left: 1.6rem;
 }
 
@@ -468,6 +470,25 @@ html {
   width: 12rem;
   border-radius: 1rem;
   object-fit: cover;
+}
+
+.img-item-main::after {
+  content: "+32";
+  font-size: 1.6rem;
+  color: #fff;
+  background-color: #1fa581a4;
+  top: 3.9rem;
+  left: 49px;
+  position: absolute;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 5;
 }
 
 .card-logo {
