@@ -6,7 +6,7 @@
 
 html {
   font-size: 62.5%;
-  font-family: sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 .dashboard-main {
@@ -26,7 +26,7 @@ html {
       rgba(101, 101, 101, 0.651)
     ),
     url("https://images7.alphacoders.com/427/427849.jpg");
-  width: 98.93vw;
+  /* width: 98.93vw; */
   object-fit: cover;
   color: #fff;
 }
@@ -61,17 +61,17 @@ html {
 .short-header-info p {
   padding-top: 1rem;
   font-size: 1.3rem;
-  color: rgba(229, 227, 227, 0.817);
+  color: #ced4da;
 }
 
 .short-header-info p:first-child {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 400;
   color: white;
 }
 
 .short-header-info p span {
-  font-weight: 500;
+  font-weight: 300;
   color: white;
 }
 
@@ -80,82 +80,88 @@ html {
   justify-content: center;
   align-items: center;
   position: absolute;
-  padding: 0.5rem 1.2rem;
+  padding: 1.5rem 1.2rem 1.5rem 1rem;
   right: 4rem;
-  top: 12rem;
+  top: 10rem;
+  border-radius: 0.2rem;
   background-color: rgba(220, 220, 220, 0.29);
 }
 
-.circle-wrap {
-  width: 50px;
-  height: 50px;
-  background: #fefcff;
-  border-radius: 50%;
-  border: 1px solid #cdcbd0;
+.progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0 1rem;
+  width: 9rem;
+  height: 9rem;
 }
 
-.circle-wrap .circle .mask,
-.circle-wrap .circle .fill {
-  width: 50px;
-  height: 50px;
+.progress svg {
+  width: 9rem;
+  height: 9rem;
   position: absolute;
-  border-radius: 50%;
+  top: 0%;
+  left: 0%;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.circle-wrap .circle .mask {
-  clip: rect(0px, 50px, 50px, 25px);
-}
-
-.circle-wrap .inside-circle {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: rgba(220, 220, 220, 0.934);
-  line-height: 30px;
-  text-align: center;
-  margin-top: 10px;
-  margin-left: 10px;
-  color: black;
+.progress svg circle:nth-child(1) {
+  width: 9rem;
+  height: 9rem;
   position: absolute;
-  z-index: 100;
-  font-weight: 700;
-  font-size: 12px;
+  fill: none;
+  stroke-dashoffset: 0;
+  stroke: rgba(255, 255, 255, 0.301);
+  stroke-width: 4;
+  stroke-dasharray: 420;
 }
 
-.mask .fill {
-  clip: rect(0px, 25px, 50px, 0px);
-  background-color: orange;
+.progress svg circle:nth-child(2) {
+  width: 9rem;
+  height: 9rem;
+  position: absolute;
+  fill: none;
+  stroke: #ffa723;
+  stroke-width: 4;
+  stroke-dasharray: 110;
 }
 
-.mask.full,
-.circle .fill {
-  animation: fill ease-in-out 3s;
-  transform: rotate(135deg);
+.number {
+  background-color: rgba(255, 255, 255, 0.301);
+  width: 7rem;
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
 }
 
-@keyframes fill {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(135deg);
-  }
+.progress-bar {
+  color: #ffffffcc;
+  font-size: 2rem;
 }
 
 .display-profile-info p {
   margin: 0.5rem 1rem;
   font-size: 1.2rem;
+  color: #e9ecef;
 }
 
 .display-profile-info p:first-child {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: white;
 }
 
 .display-profile-info-btn {
   padding: 0.5rem 1rem;
   margin: 0.5rem 1rem;
-  background-color: orange;
+  background-color: #ffa723;
+  text-transform: uppercase;
   border-radius: 0.4rem;
   border: none;
   color: white;
@@ -165,7 +171,7 @@ html {
   position: absolute;
   padding: 0.3rem 1rem;
   right: 0rem;
-  top: 10.5rem;
+  top: 13rem;
   border-radius: 0.2rem;
   background-color: rgba(220, 220, 220, 0.199);
 }
@@ -185,7 +191,7 @@ html {
 .nav-logo {
   font-size: 2rem;
   color: white;
-  font-weight: bold;
+  font-weight: 600;
   text-decoration: none;
 }
 
@@ -235,7 +241,7 @@ html {
 
 .side-title {
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 .side-logo {
@@ -253,8 +259,9 @@ html {
 }
 
 .delivered-text {
-  font-size: 1.8rem;
-  color: gray;
+  font-size: 1.4rem;
+  color: #adb5bd;
+  font-weight: 100;
 }
 
 .delivered-imgs {
@@ -275,14 +282,14 @@ html {
 }
 
 .details p:nth-child(odd) {
-  color: grey;
+  color: #868e96;
   margin-top: 2rem;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 .details p:nth-child(even) {
-  font-weight: 700;
-  font-size: 1.5rem;
+  font-weight: 600;
+  font-size: 1.4rem;
 }
 
 /* Main part of our Dashboard */
@@ -296,7 +303,6 @@ html {
 .main-part {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  /* border-left: 2px solid rgba(128, 128, 128, 0.751); */
 }
 
 .navbar {
@@ -354,7 +360,6 @@ html {
 }
 
 .main-part-nav-link:hover {
-  /* color: yellow; */
   border-bottom: 4px solid orange;
 }
 
@@ -368,6 +373,7 @@ html {
 
 .main-part-nav-link-div a:hover {
   text-decoration: none;
+  color: #868e96;
 }
 
 .main-part-nav-btn {
@@ -381,7 +387,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(9, 159, 9, 0.669);
+  background-color: #19d29f;
 }
 
 .claim-icon {
@@ -408,17 +414,17 @@ html {
 
 .card {
   display: flex;
-  background-color: rgba(242, 238, 238, 0.97);
+  background-color: rgba(255, 255, 255, 0.164);
   width: 29rem;
   height: 10rem;
   justify-content: space-evenly;
   align-items: center;
   border-radius: 2rem;
-  box-shadow: 0 0.1rem 2rem rgba(128, 128, 128, 0.388);
+  box-shadow: 0 0.1rem 2rem rgba(128, 128, 128, 0.116);
 }
 
 .count {
-  font-size: 6rem;
+  font-size: 4.2rem;
 }
 
 .member-card-info {
@@ -431,6 +437,7 @@ html {
   font-size: 1.6rem;
   color: grey;
   padding: 1rem 0;
+  font-weight: 400;
 }
 .border-line {
   height: 8rem;
@@ -463,7 +470,7 @@ html {
   padding: 2rem;
   border-radius: 1rem;
   position: relative;
-  box-shadow: 0 0.1rem 2rem rgba(128, 128, 128, 0.525);
+  box-shadow: 0 0.1rem 2rem rgba(128, 128, 128, 0.116);
 }
 
 .card-image {
@@ -494,6 +501,9 @@ html {
 
 .card-logo {
   margin-right: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
 }
 
 .card-info {
@@ -505,7 +515,7 @@ html {
   font-size: 2rem;
   text-transform: uppercase;
   margin: 0.5rem 0 0.3rem 0;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .information {
@@ -515,8 +525,14 @@ html {
 }
 
 .information span {
-  color: gray;
-  font-weight: 700;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.information p {
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 
 .profile-card-btn {
@@ -534,17 +550,16 @@ html {
 }
 
 .activity {
-  background-color: rgba(220, 220, 220, 0.21);
+  background-color: rgba(255, 255, 255, 0.164);
   border-radius: 0.5rem;
   box-shadow: 0 0.2rem 2rem rgba(0 0 0 / 0.1);
-  background-color: rgba(242, 238, 238, 0.205);
   margin: 0rem 4rem 0 1.5rem;
   position: relative;
   height: 47rem;
 }
 
 .scroll {
-  height: 47rem;
+  height: 47.8rem;
   overflow-x: hidden;
   overflow-y: auto;
   text-align: justify;
@@ -570,29 +585,30 @@ html {
 }
 
 .activity p:first-child {
-  color: grey;
+  color: #adb5bd;
   font-size: 1.6rem;
   font-weight: 300;
   margin: 2rem 5rem 2rem 3.5rem;
-  border-bottom: 1px solid grey;
-  padding-bottom: 1rem;
+  border-bottom: 1px solid #adb5bd;
+  padding-bottom: 0.5rem;
 }
 
 .activity-info h3 {
-  font-size: 1.6rem;
-  font-weight: 600;
+  font-size: 1.2rem;
+  font-weight: 500;
   color: black;
 }
 
 .activity-info {
   border-left: 1px solid rgba(128, 128, 128, 0.33);
-  padding: 0 0 2.5rem 4rem;
+  padding: 0 0 2.5rem 2rem;
   margin: 0 4.5rem;
 }
 
 .activity-info p {
   padding-top: 0.3rem;
   font-size: 1.2rem;
+  color: #adb5bd;
 }
 
 .activity-dot {
@@ -601,4 +617,16 @@ html {
   position: absolute;
   border-radius: 50%;
   left: 4rem;
+}
+
+.activity-dot-blue {
+  box-shadow: 0 0 2px 3px rgba(51, 155, 240, 0.486);
+}
+
+.activity-dot-orange {
+  box-shadow: 0 0 2px 3px rgba(255, 167, 35, 0.486);
+}
+
+.activity-dot-red {
+  box-shadow: 0 0 2px 3px rgba(31, 165, 129, 0.486);
 }
