@@ -1,0 +1,542 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: #ffeee4;
+  padding: 6rem 6rem 0 6rem;
+}
+
+.scroll {
+  height: 52rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.post-scroll {
+  height: 65rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.post-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.Suggestions-scroll {
+  height: 60rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.Suggestions-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  height: 150vh;
+  /* background-color: aquamarine; */
+}
+
+.dashboard_sidenavsection {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  background-color: #ebe6da;
+  margin-bottom: 6rem;
+  border-radius: 0.5rem 0 0 0.5rem;
+  padding: 4rem 2rem;
+  background: linear-gradient(
+    20deg,
+    rgba(214, 216, 237, 1) 0%,
+    rgba(243, 226, 216, 1) 43%,
+    rgba(228, 232, 219, 1) 80%,
+    rgba(243, 226, 216, 1) 100%
+  );
+}
+
+.dashboard_mainsection {
+  display: flex;
+  flex-direction: column;
+  padding: 3.2rem;
+  background-color: #fdfbf7;
+}
+
+.dashboard_profilesection {
+  display: flex;
+  flex-direction: column;
+  background-color: #ebe6da;
+  position: relative;
+  margin-bottom: 6rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  padding: 4rem 2rem;
+  background: linear-gradient(
+    -30deg,
+    rgba(241, 190, 189, 0.096) 0%,
+    rgba(241, 190, 189, 0.527) 30%,
+    rgba(243, 226, 216, 0.614) 50%,
+    rgba(243, 226, 216, 0.7622231021314776) 100%
+  );
+}
+
+/* Side Section of Dashborad */
+
+.dashboard_sidenavsection_final-logo {
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.dashboard_sidenavsection-logo {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dashboard_sidenavsection-logo ion-icon {
+  font-size: 2.5rem;
+}
+
+.dashboard_sidenavsection-logo p {
+  line-height: 2.5;
+  font-weight: 600;
+}
+
+.dashboard_sidenavsection-sidelogo {
+  line-height: 2.5;
+}
+
+.dashboard_sidenavsection_navlink {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 2rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.dashboard_sidenavsection_navlink:first-child {
+  background-color: #36374c;
+  color: white;
+}
+
+.dashboard_sidenavsection_navlink:hover {
+  background-color: #36374c;
+  color: white;
+}
+
+.dashboard_sidenavsection_navlink-icon {
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  border-radius: 1.2rem;
+  color: #36374c;
+  background-color: white;
+}
+
+.dashboard_sidenavsection_navlink-text {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.people-icon {
+  background-color: #c0e8ff;
+}
+.mail-icon {
+  background-color: #fed7d1;
+}
+
+.dashboard_sidenavsection_final-others {
+  padding: 1rem;
+}
+
+.other-tag {
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #53537b;
+  margin: 2rem 0;
+}
+
+.other-market {
+  margin-top: 4rem;
+}
+
+.dashboard_sidenavsection_others {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.dashboard_sidenavsection_others-items {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.others-icon {
+  font-size: 1.8rem;
+  color: #6e6b76;
+}
+
+.others-text {
+  font-size: 1.5rem;
+  color: #6e6b76;
+  font-weight: 420;
+  line-height: 1.5;
+}
+
+.others-text:hover {
+  font-weight: 600;
+  color: black;
+}
+
+.others-text:active {
+  border-bottom: 1px solid grey;
+}
+
+.dashboard_sidenavsection_others-openlogo {
+  font-size: 1rem;
+  line-height: 2rem;
+  color: gray;
+}
+
+.dashboard_sidenavsection_others-Settings {
+  position: absolute;
+  bottom: 3rem;
+  left: 3rem;
+}
+
+/* Main Section of Dashboard  */
+
+.dashboard_mainsection_mainnav {
+  display: flex;
+  padding: 1rem;
+  border-bottom: 2px solid gray;
+}
+
+.dashboard_mainsection_mainnav-frist {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-right: 2.5rem;
+}
+
+.dashboard_mainsection_mainnav-frist p {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.mainnav-icon {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.dashboard_mainsection_stories-tag {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem 0 1.5rem 0;
+}
+
+.dashboard_mainsection_stories-tag p {
+  font-size: 1.5rem;
+  color: #6e6b76cb;
+  font-weight: 420;
+}
+
+.dashboard_mainsection_stories-tag p:first-child {
+  text-transform: uppercase;
+}
+
+.dashboard_mainsection_stories-photo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dashboard_mainsection_stories-photo-frist {
+  position: relative;
+}
+
+.dashboard_mainsection_stories-photo-frist img {
+  height: 17rem;
+  width: 13rem;
+  background-color: gray;
+  border-radius: 1rem;
+  filter: grayscale(100%) brightness(80%);
+}
+
+.dashboard_mainsection_stories-photo-frist-logo {
+  position: absolute;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 500;
+  left: 2rem;
+  bottom: 2.5rem;
+}
+
+.dashboard_mainsection_posts {
+  margin-top: 3rem;
+  font-size: 1.5rem;
+  color: #6e6b76cb;
+  font-weight: 420;
+}
+
+.dashboard_mainsection_posts p:first-child {
+  text-transform: uppercase;
+}
+
+.dashboard_mainsection_posts-frist {
+  margin-top: 2rem;
+  height: 40rem;
+  border-radius: 0.5rem;
+  background-color: #393e4111;
+  padding: 1.5rem;
+}
+
+.post-profile {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  position: relative;
+}
+
+.post-photo img {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background-color: #36374c;
+  object-fit: cover;
+}
+
+.post-text p:first-child {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: black;
+}
+
+.post-text p:nth-child(2) {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.post-follow-tag {
+  position: absolute;
+  left: 22rem;
+  bottom: 2.4rem;
+  font-size: 1rem;
+}
+
+.post-description p:first-child {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  text-transform: none;
+  color: #6e6b76cb;
+}
+
+.post-description p:nth-child(2) {
+  margin-top: 0.2rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: black;
+  text-transform: none;
+}
+
+.post-add img {
+  height: 21rem;
+  width: 54.5rem;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  background-color: #37374b17;
+}
+.post_final-footer {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.post-footer {
+  display: flex;
+  align-items: center;
+}
+.post-footer-frist {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: black;
+  margin-right: 4rem;
+}
+
+.post-footer-feedback-counting {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Profile Section of Dashboard  */
+
+.dashboard_profilesection_final-profile {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.dashboard_profilesection-sidetext p:first-child {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.dashboard_profilesection-sidetext p:nth-child(2) {
+  font-size: 1rem;
+  font-weight: 300;
+  padding-left: 3.5rem;
+}
+
+.dashboard_profilesection-sidephoto {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.676);
+  background-image: url("https://w0.peakpx.com/wallpaper/121/14/HD-wallpaper-money-heist-netflix-tokyo-hair.jpg");
+  background-size: cover;
+}
+
+.Suggestions {
+  background-color: #f8efea;
+  border-radius: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.dashboard_profilesection_final-Suggestions > p {
+  color: #272836a9;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 3rem;
+}
+
+.dashboard_profilesection_Suggestions {
+  display: flex;
+  position: relative;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.dashboard_profilesection-Suggestionsphoto img {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background-color: #36374c;
+  object-fit: cover;
+}
+
+.dashboard_profilesection-Suggestionstext p:first-child {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.dashboard_profilesection-Suggestionstext p:nth-child(2) {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.dashboard_profilesection-Suggestionsbtn {
+  height: 2rem;
+  position: absolute;
+  right: 2rem;
+  width: 6rem;
+  border-radius: 3rem;
+  color: white;
+  cursor: pointer;
+  margin-left: 4rem;
+  background-color: #37374b;
+}
+
+.divider {
+  height: 0.1rem;
+  width: 25rem;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.187);
+}
+
+.dashboard_profilesection_Suggestions-frame {
+  position: relative;
+}
+
+.dashboard_profilesection_Suggestions-frame img {
+  background-color: #36374c;
+  margin-top: 3rem;
+  height: 27.2rem;
+  width: 27.2rem;
+  object-fit: cover;
+  filter: brightness(70%);
+  border-radius: 0.5rem;
+}
+
+.dashboard_profilesection_Suggestions-framelogo {
+  position: absolute;
+  font-size: 2.5rem;
+  color: white;
+  font-weight: 500;
+  left: 4rem;
+  bottom: 2.5rem;
+}
+
+.dashboard_profilesection_final-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: 3rem;
+  left: 3rem;
+}
+
+.footer-dot {
+  height: 0.5rem;
+  width: 0.5rem;
+  background-color: black;
+  margin-left: 0.8rem;
+  border-radius: 50%;
+}
+
+.dashboard_profilesection_final-footer p {
+  font-size: 1.5rem;
+  color: #6e6b76;
+  font-weight: 420;
+  margin-left: 0.8rem;
+  cursor: pointer;
+}
+
+.dashboard_profilesection_final-footer p:first-child {
+  margin-left: 2rem;
+}
