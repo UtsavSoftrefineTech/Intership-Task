@@ -116,6 +116,7 @@ body {
   display: flex;
   gap: 0.5rem;
   color: #363849;
+  font-family: serif;
 }
 
 .dashboard_sidenavsection-logo ion-icon {
@@ -123,7 +124,8 @@ body {
 }
 
 .dashboard_sidenavsection-logo p {
-  line-height: 2.5;
+  font-size: 1.8rem;
+  line-height: 2;
   font-weight: 600;
 }
 
@@ -369,9 +371,15 @@ body {
 
 .post-profile {
   display: flex;
-  gap: 1rem;
-  align-items: center;
+  gap: 5rem;
   position: relative;
+  align-items: start;
+}
+
+.post-profile-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .post-photo img {
@@ -398,9 +406,7 @@ body {
 }
 
 .post-follow-tag p {
-  position: absolute;
-  left: 22rem;
-  bottom: 2.05rem;
+  margin-top: 0.8rem;
   font-size: 1.3rem;
   text-transform: none !important;
 }
@@ -536,10 +542,16 @@ body {
 
 .dashboard_profilesection_Suggestions {
   display: flex;
-  position: relative;
+  /* position: relative; */
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
+.dashboard_profilesection_Suggestions-info {
+  display: flex;
   gap: 1rem;
   align-items: center;
-  padding: 1.5rem;
 }
 
 .dashboard_profilesection-Suggestionsphoto img {
@@ -566,7 +578,7 @@ body {
 
 .dashboard_profilesection-Suggestionsbtn {
   height: 2.5rem;
-  position: absolute;
+  /* position: absolute; */
   right: 2rem;
   width: 6rem;
   border-radius: 3rem;
