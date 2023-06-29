@@ -302,6 +302,10 @@ body {
   filter: grayscale(100%) brightness(80%);
 }
 
+.stories-image-border {
+  border: 2.5px solid black;
+}
+
 .dashboard_mainsection_stories-photo-frist-logo {
   position: absolute;
   font-size: 1.4rem;
