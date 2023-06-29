@@ -9,22 +9,8 @@ html {
 }
 
 body {
-  font-family: "Rubik", sans-serif;
+  font-family: "IBM+Plex+Serif", sans-serif;
   background-color: #ffeee4;
-  padding: 6rem 6rem 0 6rem;
-}
-
-.scroll {
-  height: 52rem;
-  overflow-x: hidden;
-  overflow-y: auto;
-  text-align: justify;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.scroll::-webkit-scrollbar {
-  display: none;
 }
 
 .post-scroll {
@@ -40,23 +26,10 @@ body {
   display: none;
 }
 
-.Suggestions-scroll {
-  height: 60rem;
-  overflow-x: hidden;
-  overflow-y: auto;
-  text-align: justify;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.Suggestions-scroll::-webkit-scrollbar {
-  display: none;
-}
-
 .dashboard {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  height: 150vh;
+  height: 100vh;
   /* background-color: aquamarine; */
 }
 
@@ -65,7 +38,6 @@ body {
   position: relative;
   flex-direction: column;
   background-color: #ebe6da;
-  margin-bottom: 6rem;
   border-radius: 0.5rem 0 0 0.5rem;
   padding: 4rem 2rem;
   background: linear-gradient(
@@ -80,7 +52,7 @@ body {
 .dashboard_mainsection {
   display: flex;
   flex-direction: column;
-  padding: 3.2rem;
+  padding: 3.5rem;
   background-color: #fdfbf7;
 }
 
@@ -89,7 +61,6 @@ body {
   flex-direction: column;
   background-color: #ebe6da;
   position: relative;
-  margin-bottom: 6rem;
   border-radius: 0 0.5rem 0.5rem 0;
   padding: 4rem 2rem;
   background: linear-gradient(
@@ -114,6 +85,7 @@ body {
 .dashboard_sidenavsection-logo {
   display: flex;
   gap: 0.5rem;
+  color: #363849;
 }
 
 .dashboard_sidenavsection-logo ion-icon {
@@ -126,7 +98,9 @@ body {
 }
 
 .dashboard_sidenavsection-sidelogo {
-  line-height: 2.5;
+  color: #363849;
+  font-size: 1.8rem;
+  line-height: 2.3;
 }
 
 .dashboard_sidenavsection_navlink {
@@ -137,6 +111,9 @@ body {
   border-radius: 2rem;
   margin-bottom: 0.5rem;
   cursor: pointer;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #36374c;
 }
 
 .dashboard_sidenavsection_navlink:first-child {
@@ -161,11 +138,6 @@ body {
   background-color: white;
 }
 
-.dashboard_sidenavsection_navlink-text {
-  font-weight: 500;
-  font-size: 1.5rem;
-}
-
 .people-icon {
   background-color: #c0e8ff;
 }
@@ -179,9 +151,10 @@ body {
 
 .other-tag {
   font-size: 1.3rem;
-  font-weight: 600;
+  font-weight: 550;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
-  color: #53537b;
+  color: #59597f;
   margin: 2rem 0;
 }
 
@@ -192,7 +165,7 @@ body {
 .dashboard_sidenavsection_others {
   display: flex;
   justify-content: space-between;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
   margin-bottom: 1rem;
   cursor: pointer;
 }
@@ -203,15 +176,15 @@ body {
 }
 
 .others-icon {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #6e6b76;
 }
 
 .others-text {
   font-size: 1.5rem;
   color: #6e6b76;
-  font-weight: 420;
-  line-height: 1.5;
+  font-weight: 550;
+  line-height: 1.6;
 }
 
 .others-text:hover {
@@ -224,8 +197,8 @@ body {
 }
 
 .dashboard_sidenavsection_others-openlogo {
-  font-size: 1rem;
-  line-height: 2rem;
+  font-size: 1.2rem;
+  line-height: 2.6rem;
   color: gray;
 }
 
@@ -239,7 +212,7 @@ body {
 
 .dashboard_mainsection_mainnav {
   display: flex;
-  padding: 1rem;
+  padding: 1rem 0;
   border-bottom: 2px solid gray;
 }
 
@@ -248,21 +221,52 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  position: relative;
   margin-right: 2.5rem;
+  color: #272836a9;
+}
+
+.dashboard_mainsection_mainnav-frist:first-child {
+  color: black;
+}
+
+.dashboard_mainsection_mainnav-frist:hover {
+  cursor: pointer;
+  color: black;
 }
 
 .dashboard_mainsection_mainnav-frist p {
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .mainnav-icon {
   font-size: 1.8rem;
-  font-weight: 500;
+  font-weight: 600;
+}
+
+.notification-couting {
+  display: flex;
+  position: absolute;
+  left: 9.4rem;
+  top: -0.6rem;
+  justify-content: center;
+  align-items: center;
+  height: 1.6rem;
+  width: 1.6rem;
+  border-radius: 50%;
+  color: white;
+  border: 2px solid white;
+  background-color: red;
+}
+
+.notification-couting p {
+  font-size: 1rem;
 }
 
 .dashboard_mainsection_stories-tag {
   display: flex;
+  font-weight: 400;
   justify-content: space-between;
   align-items: center;
   padding: 2.5rem 0 1.5rem 0;
@@ -271,11 +275,13 @@ body {
 .dashboard_mainsection_stories-tag p {
   font-size: 1.5rem;
   color: #6e6b76cb;
-  font-weight: 420;
+  cursor: pointer;
 }
 
 .dashboard_mainsection_stories-tag p:first-child {
   text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .dashboard_mainsection_stories-photo {
@@ -299,7 +305,7 @@ body {
   position: absolute;
   font-size: 1.2rem;
   color: white;
-  font-weight: 500;
+  font-weight: 600;
   left: 2rem;
   bottom: 2.5rem;
 }
@@ -312,6 +318,8 @@ body {
 }
 
 .dashboard_mainsection_posts p:first-child {
+  font-weight: 600;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
 }
 
@@ -319,8 +327,9 @@ body {
   margin-top: 2rem;
   height: 40rem;
   border-radius: 0.5rem;
-  background-color: #393e4111;
+  background-color: white;
   padding: 1.5rem;
+  border: 1px solid rgba(128, 128, 128, 0.265);
 }
 
 .post-profile {
@@ -340,40 +349,58 @@ body {
 
 .post-text p:first-child {
   font-size: 1.5rem;
-  font-weight: 500;
-  color: black;
+  font-weight: 600;
+  color: #3e3f53;
+  text-transform: none !important;
+  margin-bottom: 0.2rem;
 }
 
 .post-text p:nth-child(2) {
   font-size: 1.2rem;
-  font-weight: 300;
+  font-weight: 500;
+  color: #aaabb3;
+  letter-spacing: 0.2px;
 }
 
-.post-follow-tag {
+.post-follow-tag p {
   position: absolute;
   left: 22rem;
-  bottom: 2.4rem;
-  font-size: 1rem;
+  bottom: 2.05rem;
+  font-size: 1.3rem;
+  text-transform: none !important;
+}
+
+.post-follow-tag p:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.post-openlogo {
+  position: absolute;
+  right: 0.1rem;
+  bottom: 2.2rem;
+  cursor: pointer;
 }
 
 .post-description p:first-child {
   margin-top: 1rem;
   font-size: 1.3rem;
   text-transform: none;
-  color: #6e6b76cb;
+  color: #7f7f7f;
+  font-weight: 520;
 }
 
 .post-description p:nth-child(2) {
-  margin-top: 0.2rem;
+  margin-top: 0.5rem;
   font-size: 1.3rem;
-  font-weight: 500;
+  font-weight: 600;
   color: black;
   text-transform: none;
 }
 
 .post-add img {
   height: 21rem;
-  width: 54.5rem;
+  width: 59.5rem;
   margin-top: 2rem;
   border-radius: 0.5rem;
   background-color: #37374b17;
@@ -384,6 +411,7 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+
 .post-footer {
   display: flex;
   align-items: center;
@@ -391,14 +419,36 @@ body {
 .post-footer-frist {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
-  color: black;
+  font-size: 1.5rem;
+  color: #6e6b76;
+  font-weight: 600;
   margin-right: 4rem;
+}
+
+.post-footer-frist:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.post-footer-frist:active {
+  cursor: pointer;
+  color: #272836a9;
+  border-bottom: 1px solid black;
 }
 
 .post-footer-feedback-counting {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.2rem;
+  font-size: 1.5rem;
+  color: #6e6b76;
+  font-weight: 600;
+}
+
+.post-footer-feedback-counting:hover {
+  color: black;
+  cursor: pointer;
 }
 
 /* Profile Section of Dashboard  */
@@ -411,14 +461,16 @@ body {
 }
 
 .dashboard_profilesection-sidetext p:first-child {
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #363849;
 }
 
 .dashboard_profilesection-sidetext p:nth-child(2) {
-  font-size: 1rem;
-  font-weight: 300;
-  padding-left: 3.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #6e6b76;
+  padding-left: 4.5rem;
 }
 
 .dashboard_profilesection-sidephoto {
@@ -437,11 +489,12 @@ body {
 }
 
 .dashboard_profilesection_final-Suggestions > p {
-  color: #272836a9;
+  color: #958789;
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
   margin-top: 3rem;
+  letter-spacing: 0.5px;
 }
 
 .dashboard_profilesection_Suggestions {
@@ -461,25 +514,34 @@ body {
 }
 
 .dashboard_profilesection-Suggestionstext p:first-child {
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #3e3f53;
+  margin-bottom: 0.1rem;
 }
 
 .dashboard_profilesection-Suggestionstext p:nth-child(2) {
-  font-size: 1rem;
-  font-weight: 300;
+  color: #aaabb3;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.2px;
 }
 
 .dashboard_profilesection-Suggestionsbtn {
-  height: 2rem;
+  height: 2.5rem;
   position: absolute;
   right: 2rem;
   width: 6rem;
   border-radius: 3rem;
   color: white;
   cursor: pointer;
-  margin-left: 4rem;
   background-color: #37374b;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.dashboard_profilesection-Suggestionsbtn:hover {
+  background-color: #37374be5;
 }
 
 .divider {
@@ -510,6 +572,7 @@ body {
   font-weight: 500;
   left: 4rem;
   bottom: 2.5rem;
+  font-family: serif;
 }
 
 .dashboard_profilesection_final-footer {
@@ -532,8 +595,12 @@ body {
 .dashboard_profilesection_final-footer p {
   font-size: 1.5rem;
   color: #6e6b76;
-  font-weight: 420;
+  font-weight: 600;
   margin-left: 0.8rem;
+}
+
+.dashboard_profilesection_final-footer p:hover {
+  color: black;
   cursor: pointer;
 }
 
