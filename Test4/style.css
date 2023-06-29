@@ -26,14 +26,40 @@ body {
   display: none;
 }
 
+.sidenavsection-scroll {
+  height: 50rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.sidenavsection-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.suggestions-scroll {
+  height: 18rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.suggestions-scroll::-webkit-scrollbar {
+  display: none;
+}
+
 .dashboard {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  height: 100vh;
-  /* background-color: aquamarine; */
 }
 
 .dashboard_sidenavsection {
+  height: 100vh;
+  overflow: hidden;
   display: flex;
   position: relative;
   flex-direction: column;
@@ -52,12 +78,16 @@ body {
 .dashboard_mainsection {
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  overflow: auto;
   padding: 3.5rem;
   background-color: #fdfbf7;
 }
 
 .dashboard_profilesection {
   display: flex;
+  height: 100vh;
+  overflow: hidden;
   flex-direction: column;
   background-color: #ebe6da;
   position: relative;
@@ -192,14 +222,14 @@ body {
   color: black;
 }
 
-.others-text:active {
-  border-bottom: 1px solid grey;
+.otbhers-text:active {
+  color: rgba(0, 0, 0, 0.112);
 }
 
 .dashboard_sidenavsection_others-openlogo {
-  font-size: 1.2rem;
-  line-height: 2rem;
+  font-size: 1.5rem;
   color: gray;
+  padding-top: 0.2rem;
 }
 
 .dashboard_sidenavsection_others-Settings {
@@ -330,7 +360,7 @@ body {
 
 .dashboard_mainsection_posts-frist {
   margin-top: 2rem;
-  height: 40rem;
+  height: 41rem;
   border-radius: 0.5rem;
   background-color: white;
   padding: 1.5rem;
@@ -361,7 +391,7 @@ body {
 }
 
 .post-text p:nth-child(2) {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 500;
   color: #aaabb3;
   letter-spacing: 0.2px;
@@ -392,6 +422,7 @@ body {
   font-size: 1.3rem;
   text-transform: none;
   color: #7f7f7f;
+  line-height: 1.5;
   font-weight: 520;
 }
 
@@ -405,9 +436,11 @@ body {
 
 .post-add img {
   height: 21rem;
-  width: 59.5rem;
+  /* width: 59.5rem; */
   margin-top: 2rem;
   border-radius: 0.5rem;
+  aspect-ratio: 19.85 /7;
+  object-fit: cover;
   background-color: #37374b17;
 }
 .post_final-footer {
@@ -440,7 +473,6 @@ body {
 .post-footer-frist:active {
   cursor: pointer;
   color: #272836a9;
-  border-bottom: 1px solid black;
 }
 
 .post-footer-feedback-counting {
@@ -448,7 +480,7 @@ body {
   gap: 0.2rem;
   font-size: 1.5rem;
   color: #6e6b76;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .post-footer-feedback-counting:hover {
@@ -563,8 +595,8 @@ body {
 .dashboard_profilesection_Suggestions-frame img {
   background-color: #36374c;
   margin-top: 3rem;
-  height: 27.2rem;
-  width: 30.2rem;
+  height: 23.2rem;
+  width: 31rem;
   object-fit: cover;
   filter: brightness(70%);
   border-radius: 0.5rem;
