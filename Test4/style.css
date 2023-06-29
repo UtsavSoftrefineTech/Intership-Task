@@ -198,14 +198,15 @@ body {
 
 .dashboard_sidenavsection_others-openlogo {
   font-size: 1.2rem;
-  line-height: 2.6rem;
+  line-height: 2rem;
   color: gray;
 }
 
 .dashboard_sidenavsection_others-Settings {
   position: absolute;
-  bottom: 3rem;
+  bottom: 0.5rem;
   left: 3rem;
+  padding: 0;
 }
 
 /* Main Section of Dashboard  */
@@ -303,11 +304,11 @@ body {
 
 .dashboard_mainsection_stories-photo-frist-logo {
   position: absolute;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: white;
   font-weight: 600;
-  left: 2rem;
-  bottom: 2.5rem;
+  left: 1rem;
+  bottom: 2rem;
 }
 
 .dashboard_mainsection_posts {
@@ -559,7 +560,7 @@ body {
   background-color: #36374c;
   margin-top: 3rem;
   height: 27.2rem;
-  width: 27.2rem;
+  width: 30.2rem;
   object-fit: cover;
   filter: brightness(70%);
   border-radius: 0.5rem;
@@ -580,7 +581,7 @@ body {
   align-items: center;
   justify-content: space-evenly;
   position: absolute;
-  bottom: 3rem;
+  bottom: 1.5rem;
   left: 3rem;
 }
 
