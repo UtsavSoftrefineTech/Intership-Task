@@ -627,7 +627,8 @@ body {
 .dashboard_profilesection_final-footer {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
+  gap: 2rem;
   position: absolute;
   bottom: 1.5rem;
   left: 3rem;
@@ -637,7 +638,6 @@ body {
   height: 0.5rem;
   width: 0.5rem;
   background-color: black;
-  margin-left: 0.8rem;
   border-radius: 50%;
 }
 
@@ -645,7 +645,6 @@ body {
   font-size: 1.5rem;
   color: #6e6b76;
   font-weight: 600;
-  margin-left: 0.8rem;
 }
 
 .dashboard_profilesection_final-footer p:hover {
