@@ -1,0 +1,111 @@
+.header {
+  grid-row: header-start / header-end;
+  grid-column: sidebar-start / chats-end;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3rem;
+
+  &__part1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9rem;
+  }
+
+  &__part2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  &__icon {
+    font-size: 2rem;
+    color: gray;
+
+    &-add {
+      color: black;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__text {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  &__divider {
+    height: 2.5rem;
+    width: 0.1rem;
+    background-color: black;
+  }
+
+  &__profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  &__profile-photo {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+  }
+
+  &__profile-photo img {
+    height: 100%;
+    border-radius: 50%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__profile-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+}
+
+// SEARCH
+.search {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35rem;
+  height: 3rem;
+  border-radius: 100px;
+
+  &__input {
+    border: none;
+    height: 2rem;
+    font-size: 1.5rem;
+    width: 90%;
+
+    &:focus {
+      outline: none;
+      width: 88%;
+      font-size: 1.2rem;
+      background-color: rgba(255, 255, 255, 0.502);
+    }
+
+    &::-webkit-input-placeholder {
+      font-weight: 300;
+    }
+  }
+
+  &__button {
+    border: none;
+    background-color: white;
+  }
+
+  &__icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    padding: 0 0.8rem 0 1.3rem;
+  }
+}
