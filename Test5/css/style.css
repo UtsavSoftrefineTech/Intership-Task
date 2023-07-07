@@ -9,6 +9,18 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 1200px) {
+    html {
+      font-size: 59.375%; } }
+  @media only screen and (max-width: 1100px) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 1000px) {
+    html {
+      font-size: 53.125%; } }
+  @media only screen and (max-width: 900px) {
+    html {
+      font-size: 50%; } }
 
 body {
   background-color: #f2f6fe;
@@ -18,15 +30,17 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: [header-start] 10vh [header-end main-start] 88vh [main-end];
+  grid-template-rows: [header-start] 10vh [header-end main-start] 90vh [main-end];
   grid-template-columns: [sidebar-start] 8rem [sidebar-end projects-start] repeat(8, 1fr) [projects-end chats-start] repeat(5, 1fr) [chats-end]; }
+  @media only screen and (max-width: 820px) {
+    .container {
+      grid-template-columns: [sidebar-start] 8rem [sidebar-end projects-start] repeat(6, 1fr) [projects-end chats-start] repeat(5, 1fr) [chats-end]; } }
 
 .chats {
   grid-row: main-start / main-end;
   grid-column: chats-start / chats-end;
   display: flex;
-  flex-direction: column;
-  gap: 2rem; }
+  flex-direction: column; }
   .chats__heading {
     padding: 4.3rem 3rem 0 3rem;
     display: flex;
@@ -40,7 +54,8 @@ body {
   .chats__divider {
     height: 0.1rem;
     width: 100%;
-    background-color: gray; }
+    background-color: gray;
+    margin: 2rem 0; }
   .chats__info {
     display: flex;
     align-items: center;
@@ -54,18 +69,41 @@ body {
   .chats__person_data {
     display: flex;
     flex-direction: column;
-    justify-content: center; }
+    justify-content: center;
+    gap: 0.6rem; }
   .chats__person_name {
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 1.8rem;
     font-weight: 700; }
+    .chats__person_name .star-icon:hover {
+      cursor: pointer; }
   .chats__person_info {
-    font-size: 1.2rem; }
+    font-size: 1.3rem;
+    line-height: 1.6rem; }
   .chats__person_date {
     font-size: 1.2rem;
     align-self: flex-end; }
+
+.chat-effect:hover {
+  cursor: pointer;
+  background-color: white;
+  border-radius: 10px;
+  margin: 0 2rem;
+  padding: 1.5rem 3rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  translate: 5px -10px; }
+
+.chat-scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
+  scrollbar-width: none;
+  -ms-overflow-style: none; }
+
+.chat-scroll::-webkit-scrollbar {
+  display: none; }
 
 .header {
   grid-row: header-start / header-end;
@@ -85,7 +123,7 @@ body {
     justify-content: center;
     gap: 1.5rem; }
   .header__icon {
-    font-size: 2rem;
+    font-size: 2.6rem;
     color: gray; }
     .header__icon-add {
       color: black; }
@@ -95,17 +133,17 @@ body {
     font-size: 2rem;
     font-weight: 700; }
   .header__divider {
-    height: 2.5rem;
+    height: 3rem;
     width: 0.1rem;
     background-color: black; }
   .header__profile {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem; }
+    gap: 0.5rem; }
   .header__profile-photo {
-    height: 3rem;
-    width: 3rem;
+    height: 3.5rem;
+    width: 3.5rem;
     border-radius: 50%; }
   .header__profile-photo img {
     height: 100%;
@@ -113,7 +151,7 @@ body {
     width: 100%;
     object-fit: cover; }
   .header__profile-text {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 700; }
 
 .search {
@@ -121,7 +159,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 35rem;
+  width: 40rem;
   height: 3rem;
   border-radius: 100px; }
   .search__input {
@@ -143,6 +181,21 @@ body {
     height: 1.5rem;
     width: 1.5rem;
     padding: 0 0.8rem 0 1.3rem; }
+  @media only screen and (max-width: 1100px) {
+    .search {
+      width: 38rem; } }
+  @media only screen and (max-width: 1000px) {
+    .search {
+      width: 36rem; } }
+  @media only screen and (max-width: 900px) {
+    .search {
+      width: 34rem; } }
+  @media only screen and (max-width: 820px) {
+    .search {
+      width: 32rem; } }
+  @media only screen and (max-width: 767px) {
+    .search {
+      width: 30rem; } }
 
 .projects {
   background-color: white;
@@ -152,12 +205,12 @@ body {
   border-top-right-radius: 5rem;
   display: flex;
   flex-direction: column;
-  gap: 5rem;
-  padding: 4.3rem 6rem 0 6rem; }
+  gap: 5rem; }
   .projects__heading {
     display: flex;
     align-items: center;
-    justify-content: space-between; }
+    justify-content: space-between;
+    padding: 4.3rem 6rem 0 6rem; }
     .projects__heading p {
       font-size: 2rem;
       font-weight: 700;
@@ -165,54 +218,96 @@ body {
   .projects__information {
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    padding: 0 6rem; }
+    .projects__information-logo {
+      font-size: 2.2rem; }
+      .projects__information-logo ion-icon:first-child {
+        padding-right: 0.5rem; }
+    @media only screen and (max-width: 767px) {
+      .projects__information-logo {
+        display: flex; } }
   .projects__data {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem; }
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 2rem; }
     .projects__data-info {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr) 1fr;
-      grid-template-rows: 1.5rem 1rem;
-      row-gap: 0.6rem;
-      column-gap: 0.5rem;
-      align-items: end; }
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 0.5rem; }
       .projects__data-info p:first-child {
-        grid-column: 1 / -1;
-        grid-row: 1 / 2;
         font-size: 1.8rem;
         font-weight: 700; }
       .projects__data-info p:nth-child(2) {
-        grid-column: 1 / 7;
-        grid-row: 2 / -1;
         font-size: 1.4rem;
         font-weight: 500; }
       .projects__data-info ion-icon {
         font-size: 1rem;
         padding-bottom: 0.15rem; }
-  .projects__information-logo {
-    font-size: 2.2rem; }
-    .projects__information-logo ion-icon:first-child {
-      padding-right: 1rem; }
+    @media only screen and (max-width: 1100px) {
+      .projects__data {
+        flex-wrap: wrap; } }
+    @media only screen and (max-width: 1000px) {
+      .projects__data {
+        gap: 1.5rem; } }
+    @media only screen and (max-width: 900px) {
+      .projects__data {
+        gap: 0.9rem; } }
+    @media only screen and (max-width: 820px) {
+      .projects__data {
+        gap: 1.6rem; }
+        .projects__data .dot-3 {
+          visibility: hidden; } }
+    @media only screen and (max-width: 767px) {
+      .projects__data {
+        gap: 3.5rem; }
+        .projects__data .dot-3 {
+          visibility: visible; }
+        .projects__data .dot-2 {
+          visibility: hidden; } }
   .projects__card {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 5rem;
-    row-gap: 5rem; }
+    column-gap: 3rem;
+    padding: 0 6rem 0 6rem;
+    row-gap: 2rem; }
+    @media only screen and (max-width: 1300px) {
+      .projects__card {
+        column-gap: 1.2rem;
+        row-gap: 1rem; } }
+    @media only screen and (max-width: 1200px) {
+      .projects__card {
+        column-gap: 0.6rem;
+        row-gap: 0.5rem; } }
+    @media only screen and (max-width: 1100px) {
+      .projects__card {
+        padding: 0 6rem 0 6rem; } }
+    @media only screen and (max-width: 820px) {
+      .projects__card {
+        grid-template-columns: 1fr;
+        margin: 0 2rem; } }
+    @media only screen and (max-width: 767px) {
+      .projects__card {
+        margin: 0 1.5rem; } }
   .projects__infocard {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     height: 30rem;
     border-radius: 3rem;
+    margin: 2rem;
+    position: relative;
     background-color: white;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; }
     .projects__infocard_heading {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 2rem 2rem 0 2rem; }
+      padding: 2rem 2rem 0 2rem;
+      margin: 0.5rem 0; }
       .projects__infocard_heading p {
         font-size: 1.5rem;
         color: gray;
@@ -224,7 +319,8 @@ body {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 1rem 2rem; }
+      padding: 1rem 2rem;
+      margin: 2rem 0; }
       .projects__infocard_description p:first-child {
         font-size: 2rem;
         font-weight: 700;
@@ -237,12 +333,15 @@ body {
       display: flex;
       flex-direction: column;
       gap: 1rem;
-      padding: 0 2rem; }
+      padding: 0 2rem;
+      margin: 0.5rem 0; }
       .projects__infocard_progress p:first-child {
         font-size: 1.6rem;
         font-weight: 700; }
       .projects__infocard_progress progress {
-        width: 100%; }
+        height: 1.2rem;
+        width: 100%;
+        accent-color: #2ac9ff; }
       .projects__infocard_progress-percentage {
         align-self: flex-end;
         font-size: 1.8rem;
@@ -251,6 +350,7 @@ body {
       display: flex;
       align-items: center;
       padding: 1.5rem 2rem;
+      margin: 1.5rem 0;
       justify-content: space-between;
       border-top: 1px solid rgba(128, 128, 128, 0.345); }
       .projects__infocard_footer-photo {
@@ -267,18 +367,261 @@ body {
         margin-left: -1rem;
         outline: 2px solid white; }
       .projects__infocard_footer-icon {
-        color: blue;
-        font-size: 3rem; }
+        color: #2ac9ff;
+        font-size: 3.5rem; }
       .projects__infocard_footer-button {
         border: none;
         font-weight: 700;
-        color: blue;
-        background-color: aqua;
+        color: #2ac9ff;
+        background-color: #dbf6fd;
         border-radius: 100px;
         padding: 1rem 2.3rem; }
+    .projects__infocard_border1 {
+      position: absolute;
+      left: 2rem;
+      bottom: -1rem;
+      height: 0.5rem;
+      width: 85%;
+      background-color: #2ac9ff;
+      border-radius: 100px; }
+    .projects__infocard_border2 {
+      position: absolute;
+      left: 3.5rem;
+      bottom: -2rem;
+      height: 0.5rem;
+      width: 75%;
+      border-radius: 100px;
+      background-color: #2ac9ff; }
+    .projects__infocard .border-hover {
+      opacity: 0; }
     .projects__infocard:hover {
       cursor: pointer;
-      transform: scale(1.1); }
+      transform: scale(1.02); }
+      .projects__infocard:hover .border-hover {
+        opacity: 1; }
+    @media only screen and (max-width: 1300px) {
+      .projects__infocard {
+        height: 25rem; }
+        .projects__infocard_heading {
+          margin: 0;
+          padding-top: 1.5rem; }
+        .projects__infocard_description {
+          padding: 2rem 2rem 1rem 2rem;
+          margin: 1rem 0; }
+        .projects__infocard_progress {
+          padding: 0 2rem;
+          margin: 0;
+          gap: 0.5rem; }
+        .projects__infocard_footer {
+          margin-top: 1rem; }
+          .projects__infocard_footer-photo {
+            height: 2.5rem;
+            width: 2.5rem; }
+          .projects__infocard_footer-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.2rem; }
+          .projects__infocard_footer-icon {
+            color: #2ac9ff;
+            font-size: 3rem; }
+          .projects__infocard_footer-button {
+            padding: 1rem 1.5rem; } }
+    @media only screen and (max-width: 1200px) {
+      .projects__infocard_footer {
+        margin-top: 1rem; }
+        .projects__infocard_footer-photo {
+          height: 2.3rem;
+          width: 2.3rem; }
+        .projects__infocard_footer-image {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.1rem; }
+        .projects__infocard_footer-icon {
+          color: #2ac9ff;
+          font-size: 2.8rem; }
+        .projects__infocard_footer-button {
+          padding: 0.85rem 1.2rem; }
+      .projects__infocard_border1 {
+        left: 2.2rem; }
+      .projects__infocard_border2 {
+        left: 3.5rem; } }
+    @media only screen and (max-width: 1100px) {
+      .projects__infocard {
+        margin: 2rem 1rem 1rem 1rem; }
+        .projects__infocard_heading {
+          padding: 1rem 2rem 0 2rem;
+          margin: 0; }
+          .projects__infocard_heading p {
+            font-size: 1.3rem; }
+          .projects__infocard_heading ion-icon {
+            font-size: 1.3rem; }
+        .projects__infocard_description {
+          padding: 3rem 2rem 0 2rem;
+          margin: 2rem 0; }
+          .projects__infocard_description p:first-child {
+            font-size: 1.8rem; }
+          .projects__infocard_description p:nth-child(2) {
+            font-size: 1.2rem; }
+        .projects__infocard_progress {
+          gap: 0.3rem;
+          padding: 0 2rem;
+          margin: 0; }
+          .projects__infocard_progress p:first-child {
+            font-size: 1.6rem; }
+          .projects__infocard_progress-percentage {
+            font-size: 1.6rem;
+            font-weight: 700; }
+          .projects__infocard_progress progress {
+            height: 1rem;
+            width: 100%; }
+        .projects__infocard_footer {
+          margin-top: 1rem; }
+          .projects__infocard_footer-photo {
+            height: 2.3rem;
+            width: 2.3rem; }
+          .projects__infocard_footer-image {
+            gap: 0.1rem; }
+          .projects__infocard_footer-icon {
+            color: #2ac9ff;
+            font-size: 2.8rem; }
+          .projects__infocard_footer-button {
+            font-size: 1.2rem;
+            padding: 0.5rem 0.6rem; }
+        .projects__infocard_border1 {
+          height: 0.4rem;
+          width: 80%;
+          bottom: -1rem;
+          left: 2.2rem; }
+        .projects__infocard_border2 {
+          height: 0.3rem;
+          width: 65%;
+          bottom: -1.8rem;
+          left: 4rem; } }
+    @media only screen and (max-width: 1000px) {
+      .projects__infocard_heading {
+        padding: 1rem 2rem 0 2rem; }
+        .projects__infocard_heading p {
+          font-size: 1.3rem; }
+        .projects__infocard_heading ion-icon {
+          font-size: 1.3rem; }
+      .projects__infocard_description {
+        padding: 1.5rem 2rem 0 2rem;
+        margin: 1.5rem 0; }
+        .projects__infocard_description p:first-child {
+          font-size: 1.8rem; }
+        .projects__infocard_description p:nth-child(2) {
+          font-size: 1.2rem; }
+      .projects__infocard_progress {
+        gap: 0.2rem;
+        padding: 0 2rem;
+        margin: 0; }
+        .projects__infocard_progress p:first-child {
+          font-size: 1.6rem; }
+        .projects__infocard_progress-percentage {
+          font-size: 1.6rem;
+          font-weight: 700; }
+        .projects__infocard_progress progress {
+          height: 1rem;
+          width: 100%; }
+      .projects__infocard_footer {
+        margin: 0; } }
+    @media only screen and (max-width: 900px) {
+      .projects__infocard_heading {
+        padding: 1rem 2rem 0 2rem; }
+      .projects__infocard_description {
+        padding: 2rem 2rem 0 2rem; }
+      .projects__infocard_progress p:first-child {
+        font-size: 1.4rem; }
+      .projects__infocard_progress-percentage {
+        font-size: 1.5rem; }
+      .projects__infocard_footer {
+        padding: 0.8rem 2rem; }
+        .projects__infocard_footer-photo {
+          height: 2.2rem;
+          width: 2.2rem; }
+        .projects__infocard_footer-button {
+          font-size: 1.1rem; } }
+    @media only screen and (max-width: 820px) {
+      .projects__infocard_border1 {
+        left: 2.5rem;
+        bottom: -1.2rem;
+        width: 85%; }
+      .projects__infocard_border2 {
+        left: 4.3rem;
+        bottom: -2rem;
+        width: 75%; } }
+    @media only screen and (max-width: 767px) {
+      .projects__infocard_border2 {
+        left: 4rem;
+        bottom: -2rem;
+        width: 75%; } }
+  .projects__infocard:nth-child(2) {
+    background-color: #fee4cb; }
+    .projects__infocard:nth-child(2) .footer-icon {
+      color: #ff733a; }
+    .projects__infocard:nth-child(2) .footer-button-text {
+      color: #ff733a;
+      background-color: #fff; }
+    .projects__infocard:nth-child(2) .border-hover {
+      background-color: #fee4cb; }
+    .projects__infocard:nth-child(2) progress {
+      accent-color: #ff733a; }
+  .projects__infocard:nth-child(3) {
+    background-color: #b9f2d1; }
+    .projects__infocard:nth-child(3) .footer-icon {
+      color: #01cf53; }
+    .projects__infocard:nth-child(3) .footer-button-text {
+      color: #01cf53;
+      background-color: #fff; }
+    .projects__infocard:nth-child(3) .border-hover {
+      background-color: #b9f2d1; }
+    .projects__infocard:nth-child(3) progress {
+      accent-color: #01cf53; }
+  .projects__infocard:nth-child(4) {
+    background-color: #ffd3e2; }
+    .projects__infocard:nth-child(4) .footer-icon {
+      color: #ff72ac; }
+    .projects__infocard:nth-child(4) .footer-button-text {
+      color: #ff72ac;
+      background-color: #fff; }
+    .projects__infocard:nth-child(4) .border-hover {
+      background-color: #ffd3e2; }
+    .projects__infocard:nth-child(4) progress {
+      accent-color: #ff72ac; }
+  .projects__infocard:nth-child(5) {
+    background-color: #e9e7fd; }
+    .projects__infocard:nth-child(5) .footer-icon {
+      color: #9187ff; }
+    .projects__infocard:nth-child(5) .footer-button-text {
+      color: #9187ff;
+      background-color: #fff; }
+    .projects__infocard:nth-child(5) .border-hover {
+      background-color: #e9e7fd; }
+    .projects__infocard:nth-child(5) progress {
+      accent-color: #9187ff; }
+  .projects__infocard:nth-child(6) {
+    background-color: #fee4cb; }
+    .projects__infocard:nth-child(6) .footer-icon {
+      color: #ff733a; }
+    .projects__infocard:nth-child(6) .footer-button-text {
+      color: #ff733a;
+      background-color: #fff; }
+    .projects__infocard:nth-child(6) .border-hover {
+      background-color: #fee4cb; }
+    .projects__infocard:nth-child(6) progress {
+      accent-color: #ff733a; }
+
+.project-scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
+  scrollbar-width: none;
+  -ms-overflow-style: none; }
+
+.project-scroll::-webkit-scrollbar {
+  display: none; }
 
 .sidebar {
   grid-row: main-start / main-end;

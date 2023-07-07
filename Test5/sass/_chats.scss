@@ -4,7 +4,7 @@
 
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  // gap: 2rem;
 
   &__heading {
     padding: 4.3rem 3rem 0 3rem;
@@ -26,6 +26,7 @@
     height: 0.1rem;
     width: 100%;
     background-color: gray;
+    margin: 2rem 0;
   }
 
   &__info {
@@ -47,6 +48,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      gap: 0.6rem;
     }
 
     &_name {
@@ -55,14 +57,45 @@
       justify-content: space-between;
       font-size: 1.8rem;
       font-weight: 700;
+
+      .star-icon:hover {
+        cursor: pointer;
+      }
     }
 
     &_info {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
+      line-height: 1.6rem;
     }
     &_date {
       font-size: 1.2rem;
       align-self: flex-end;
     }
   }
+
+  // @media only screen and (max-width: 700px) {
+  //   flex-direction: row;
+  // }
+}
+
+.chat-effect:hover {
+  cursor: pointer;
+  background-color: white;
+  border-radius: 10px;
+  margin: 0 2rem;
+  padding: 1.5rem 3rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  translate: 5px -10px;
+}
+
+.chat-scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.chat-scroll::-webkit-scrollbar {
+  display: none;
 }
