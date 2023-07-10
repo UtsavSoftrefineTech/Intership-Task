@@ -17,9 +17,10 @@
     padding: 4.3rem 6rem 0 6rem;
 
     & p {
-      font-size: 2rem;
+      font-size: 2.5rem;
       font-weight: 700;
       color: #4b4b4b;
+      font-family: serif;
     }
   }
 
@@ -64,7 +65,8 @@
 
       & p:nth-child(2) {
         font-size: 1.4rem;
-        font-weight: 500;
+        font-weight: 530;
+        color: #939393;
       }
 
       & ion-icon {
@@ -77,24 +79,69 @@
       flex-wrap: wrap;
     }
     @media only screen and (max-width: 1000px) {
-      gap: 1.5rem;
+      column-gap: 1.5rem;
     }
     @media only screen and (max-width: 900px) {
-      gap: 0.9rem;
+      column-gap: 0.9rem;
     }
     @media only screen and (max-width: 820px) {
-      gap: 1.6rem;
+      column-gap: 1.6rem;
       .dot-3 {
         visibility: hidden;
       }
     }
     @media only screen and (max-width: 767px) {
-      gap: 3.5rem;
+      column-gap: 3.5rem;
       .dot-3 {
         visibility: visible;
       }
       .dot-2 {
         visibility: hidden;
+      }
+    }
+    @media only screen and (max-width: 700px) {
+      .dot-2 {
+        visibility: visible;
+      }
+    }
+    @media only screen and (max-width: 600px) {
+      gap: 1.8rem;
+    }
+    @media only screen and (max-width: 500px) {
+      column-gap: 2rem;
+    }
+    @media only screen and (max-width: 482px) {
+      gap: 3.5rem;
+
+      .dot-3 {
+        visibility: hidden;
+      }
+    }
+    @media only screen and (max-width: 428px) {
+      column-gap: 2.5rem;
+
+      .dot-3 {
+        visibility: hidden;
+      }
+      .dot-2 {
+        visibility: visible;
+      }
+    }
+    @media only screen and (max-width: 396px) {
+      column-gap: 1.5rem;
+      .dot-2 {
+        visibility: visible;
+      }
+      .dot-3 {
+        visibility: hidden;
+      }
+    }
+    @media only screen and (max-width: 364px) {
+      .dot-2 {
+        visibility: hidden;
+      }
+      .dot-3 {
+        visibility: visible;
       }
     }
   }
@@ -543,6 +590,51 @@
         width: 75%;
       }
     }
+
+    @media only screen and (max-width: 700px) {
+      margin: 2rem 15rem;
+      height: 32rem;
+
+      &_border1 {
+        width: 87%;
+      }
+
+      &_border2 {
+        width: 80%;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      margin: 2rem 10rem;
+    }
+    @media only screen and (max-width: 500px) {
+      margin: 2rem 7rem;
+      &_border2 {
+        left: 3.6rem;
+      }
+    }
+    @media only screen and (max-width: 450px) {
+      margin: 2rem 4rem;
+      &_border1 {
+        left: 1.8rem;
+      }
+
+      &_border2 {
+        width: 78%;
+        left: 3.2rem;
+      }
+    }
+    @media only screen and (max-width: 396px) {
+      margin: 2rem 0rem;
+      &_border1 {
+        left: 1.5rem;
+      }
+
+      &_border2 {
+        width: 78%;
+        left: 3rem;
+      }
+    }
   }
 
   &__infocard:nth-child(2) {
@@ -645,10 +737,10 @@
     }
   }
 
-  // @media only screen and (max-width: 700px) {
-  //   margin-top: 200px;
-  //   padding: 0;
-  // }
+  @media only screen and (max-width: 700px) {
+    grid-row: project-start / project-end;
+    grid-column: 1 / -1;
+  }
 }
 
 .project-scroll {

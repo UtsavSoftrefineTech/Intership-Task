@@ -36,7 +36,14 @@
     font-size: 2rem;
   }
 
-  // @media only screen and (max-width: 700px) {
-  //   flex-direction: row;
-  // }
+  @media only screen and (max-width: 700px) {
+    grid-row: sidebar-start / sidebar-end;
+    grid-column: 1 / -1;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    margin-top: 0;
+    gap: 0;
+  }
 }

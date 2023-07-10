@@ -51,11 +51,8 @@ body {
       repeat(6, 1fr) [projects-end chats-start] repeat(5, 1fr) [chats-end];
   }
 
-  // @media only screen and (max-width: 700px) {
-  //   grid-template-row:
-  //     [header-start] 3rem [header-end sidebar-start]
-  //     8rem [sidebar-end projects-start] 80vh [projects-end chats-start] 80vh
-  //     [chats-end];
-  //   grid-template-columns: 1fr;
-  // }
+  @media only screen and (max-width: 700px) {
+    grid-template-rows: [header-start] 12vh [header-end sidebar-start] 12vh [sidebar-end project-start] 100vh [project-end chat-start] 100vh [chat-end];
+    // grid-template-columns: 1 / -1;
+  }
 }

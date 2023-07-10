@@ -1,7 +1,6 @@
 .header {
   grid-row: header-start / header-end;
   grid-column: sidebar-start / chats-end;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -18,6 +17,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
     gap: 1.5rem;
   }
 
@@ -34,8 +34,9 @@
   }
 
   &__text {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 700;
+    font-family: serif;
   }
 
   &__divider {
@@ -49,29 +50,73 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+
+    &-photo {
+      height: 3.5rem;
+      width: 3.5rem;
+      border-radius: 50%;
+    }
+
+    &-photo img {
+      height: 100%;
+      border-radius: 50%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &-text {
+      font-size: 1.8rem;
+      font-weight: 700;
+      font-family: serif;
+    }
   }
 
-  &__profile-photo {
-    height: 3.5rem;
-    width: 3.5rem;
+  &__notification-counting {
+    position: absolute;
+    height: 0.6rem;
+    width: 0.6rem;
+    background-color: red;
     border-radius: 50%;
+    top: 0.7rem;
+    left: 5.5rem;
   }
 
-  &__profile-photo img {
-    height: 100%;
-    border-radius: 50%;
-    width: 100%;
-    object-fit: cover;
-  }
+  @media only screen and (max-width: 700px) {
+    padding: 0 2rem;
 
-  &__profile-text {
-    font-size: 1.6rem;
-    font-weight: 700;
+    &__part1 {
+      gap: 4rem;
+    }
+    .Side-icon {
+      display: none;
+    }
   }
-
-  // @media only screen and (max-width: 700px) {
-  //   flex-direction: row;
-  // }
+  @media only screen and (max-width: 500px) {
+    &__part1 {
+      gap: 3rem;
+    }
+    &__part2 {
+      gap: 1rem;
+    }
+    &__notification-counting {
+      top: 0.7rem;
+      left: 5rem;
+    }
+  }
+  @media only screen and (max-width: 450px) {
+    &__part1 {
+      gap: 2rem;
+    }
+    &__part2 {
+      gap: 0.8rem;
+    }
+  }
+  @media only screen and (max-width: 428px) {
+    &__notification-counting {
+      top: 0.7rem;
+      left: 4.8rem;
+    }
+  }
 }
 
 // SEARCH
@@ -88,7 +133,7 @@
     border: none;
     height: 2rem;
     font-size: 1.5rem;
-    width: 90%;
+    width: 80%;
 
     &:focus {
       outline: none;
@@ -104,6 +149,8 @@
 
   &__button {
     border: none;
+    display: flex;
+    align-items: center;
     background-color: white;
   }
 
@@ -131,5 +178,43 @@
 
   @media only screen and (max-width: 767px) {
     width: 30rem;
+  }
+
+  @media only screen and (max-width: 700px) {
+    width: 27rem;
+  }
+  @media only screen and (max-width: 600px) {
+    width: 24rem;
+  }
+  @media only screen and (max-width: 500px) {
+    width: 20rem;
+  }
+
+  @media only screen and (max-width: 450px) {
+    width: 14rem;
+  }
+
+  @media only screen and (max-width: 400px) {
+    width: 12rem;
+  }
+
+  @media only screen and (max-width: 396px) {
+    width: 10rem;
+  }
+
+  @media only screen and (max-width: 364px) {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 100px;
+
+    &__input {
+      display: none;
+    }
+
+    &__icon {
+      height: 1.5rem;
+      width: 1.5rem;
+      padding: 0;
+    }
   }
 }
