@@ -16,11 +16,16 @@
     justify-content: space-between;
     padding: 4.3rem 6rem 0 6rem;
 
-    & p {
+    & p:first-child {
       font-size: 2.5rem;
       font-weight: 700;
       color: #4b4b4b;
-      font-family: serif;
+    }
+
+    & p:nth-child(2) {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #4b4b4b;
     }
   }
 
@@ -116,36 +121,36 @@
     @media only screen and (max-width: 482px) {
       gap: 3.5rem;
 
-      .dot-3 {
-        visibility: hidden;
-      }
+      // .dot-3 {
+      //   visibility: hidden;
+      // }
     }
     @media only screen and (max-width: 428px) {
       column-gap: 2.5rem;
 
-      .dot-3 {
-        visibility: hidden;
-      }
-      .dot-2 {
-        visibility: visible;
-      }
+      // .dot-3 {
+      //   visibility: hidden;
+      // }
+      // .dot-2 {
+      //   visibility: visible;
+      // }
     }
     @media only screen and (max-width: 396px) {
       column-gap: 1.5rem;
-      .dot-2 {
-        visibility: visible;
-      }
-      .dot-3 {
-        visibility: hidden;
-      }
+      // .dot-2 {
+      //   visibility: visible;
+      // }
+      // .dot-3 {
+      //   visibility: hidden;
+      // }
     }
     @media only screen and (max-width: 364px) {
-      .dot-2 {
-        visibility: hidden;
-      }
-      .dot-3 {
-        visibility: visible;
-      }
+      // .dot-2 {
+      //   visibility: hidden;
+      // }
+      // .dot-3 {
+      //   visibility: visible;
+      // }
     }
   }
 
@@ -174,8 +179,17 @@
       grid-template-columns: 1fr;
       margin: 0 2rem;
     }
+
     @media only screen and (max-width: 767px) {
       margin: 0 1.5rem;
+    }
+
+    @media only screen and (max-width: 700px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media only screen and (max-width: 482px) {
+      grid-template-columns: 1fr;
     }
   }
 
@@ -243,12 +257,29 @@
       }
 
       & progress {
-        height: 1.2rem;
+        position: relative;
+        height: 1rem;
         width: 100%;
-        accent-color: #2ac9ff;
-        // &::-webkit-progress-value {
-        //   background: white;
-        // }
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          border-radius: 20px;
+        }
+
+        &::before {
+          width: 100%;
+          background: rgba(128, 128, 128, 0.619);
+        }
+
+        &::after {
+          width: 90%;
+          background: #2ac9ff;
+        }
       }
       &-percentage {
         align-self: flex-end;
@@ -479,16 +510,16 @@
       }
       &_border1 {
         height: 0.4rem;
-        width: 80%;
+        width: 82%;
         bottom: -1rem;
         left: 2.2rem;
       }
 
       &_border2 {
         height: 0.3rem;
-        width: 65%;
+        width: 72%;
         bottom: -1.8rem;
-        left: 4rem;
+        left: 3.5rem;
       }
     }
 
@@ -588,16 +619,13 @@
 
     @media only screen and (max-width: 767px) {
       &_border2 {
-        left: 4rem;
+        left: 3.8rem;
         bottom: -2rem;
         width: 75%;
       }
     }
 
     @media only screen and (max-width: 700px) {
-      margin: 2rem 15rem;
-      height: 32rem;
-
       &_border1 {
         width: 87%;
       }
@@ -606,15 +634,14 @@
         width: 80%;
       }
     }
-
-    @media only screen and (max-width: 600px) {
-      margin: 2rem 10rem;
-    }
     @media only screen and (max-width: 500px) {
-      margin: 2rem 7rem;
       &_border2 {
         left: 3.6rem;
       }
+    }
+
+    @media only screen and (max-width: 482px) {
+      margin: 2rem 6rem;
     }
     @media only screen and (max-width: 450px) {
       margin: 2rem 4rem;
@@ -656,7 +683,14 @@
       background-color: #fee4cb;
     }
     progress {
-      accent-color: #ff733a;
+      &::before {
+        background: white;
+      }
+
+      &::after {
+        width: 30%;
+        background: #ff733a;
+      }
     }
   }
 
@@ -676,7 +710,14 @@
       background-color: #b9f2d1;
     }
     progress {
-      accent-color: #01cf53;
+      &::before {
+        background: white;
+      }
+
+      &::after {
+        width: 50%;
+        background: #01cf53;
+      }
     }
   }
 
@@ -696,7 +737,14 @@
       background-color: #ffd3e2;
     }
     progress {
-      accent-color: #ff72ac;
+      &::before {
+        background: white;
+      }
+
+      &::after {
+        width: 20%;
+        background: #ff72ac;
+      }
     }
   }
 
@@ -715,8 +763,16 @@
     .border-hover {
       background-color: #e9e7fd;
     }
+
     progress {
-      accent-color: #9187ff;
+      &::before {
+        background: white;
+      }
+
+      &::after {
+        width: 90%;
+        background: #9187ff;
+      }
     }
   }
 
@@ -736,7 +792,14 @@
       background-color: #fee4cb;
     }
     progress {
-      accent-color: #ff733a;
+      &::before {
+        background: white;
+      }
+
+      &::after {
+        width: 70%;
+        background: #ff733a;
+      }
     }
   }
 

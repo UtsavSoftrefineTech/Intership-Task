@@ -24,7 +24,7 @@ html {
 
 body {
   background-color: #f2f6fe;
-  font-family: sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 300;
   line-height: 1; }
 
@@ -51,8 +51,7 @@ body {
     justify-content: space-between; }
     .chats__heading-text {
       font-size: 2.5rem;
-      font-weight: 700;
-      font-family: serif; }
+      font-weight: 700; }
     .chats__heading-icon {
       font-size: 2rem; }
       .chats__heading-icon:hover {
@@ -146,8 +145,7 @@ body {
       cursor: pointer; }
   .header__text {
     font-size: 2.5rem;
-    font-weight: 700;
-    font-family: serif; }
+    font-weight: 700; }
   .header__divider {
     height: 3rem;
     width: 0.1rem;
@@ -170,8 +168,7 @@ body {
         cursor: pointer; }
     .header__profile-text {
       font-size: 1.8rem;
-      font-weight: 700;
-      font-family: serif; }
+      font-weight: 700; }
   .header__notification-counting {
     position: absolute;
     height: 0.6rem;
@@ -204,6 +201,14 @@ body {
     .header__notification-counting {
       top: 0.7rem;
       left: 4.8rem; } }
+  @media only screen and (max-width: 364px) {
+    .header {
+      margin: 1rem 0;
+      align-items: flex-start; }
+      .header__part1 {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 1rem; } }
 
 .search {
   background-color: white;
@@ -270,16 +275,7 @@ body {
       width: 10rem; } }
   @media only screen and (max-width: 364px) {
     .search {
-      height: 3rem;
-      width: 3rem;
-      border-radius: 100px;
-      justify-content: center; }
-      .search__input {
-        display: none; }
-      .search__icon {
-        height: 1.5rem;
-        width: 1.5rem;
-        padding: 0; } }
+      width: 10rem; } }
 
 .projects {
   background-color: white;
@@ -295,11 +291,14 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 4.3rem 6rem 0 6rem; }
-    .projects__heading p {
+    .projects__heading p:first-child {
       font-size: 2.5rem;
       font-weight: 700;
-      color: #4b4b4b;
-      font-family: serif; }
+      color: #4b4b4b; }
+    .projects__heading p:nth-child(2) {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #4b4b4b; }
   .projects__information {
     display: flex;
     justify-content: space-between;
@@ -367,28 +366,13 @@ body {
         column-gap: 2rem; } }
     @media only screen and (max-width: 482px) {
       .projects__data {
-        gap: 3.5rem; }
-        .projects__data .dot-3 {
-          visibility: hidden; } }
+        gap: 3.5rem; } }
     @media only screen and (max-width: 428px) {
       .projects__data {
-        column-gap: 2.5rem; }
-        .projects__data .dot-3 {
-          visibility: hidden; }
-        .projects__data .dot-2 {
-          visibility: visible; } }
+        column-gap: 2.5rem; } }
     @media only screen and (max-width: 396px) {
       .projects__data {
-        column-gap: 1.5rem; }
-        .projects__data .dot-2 {
-          visibility: visible; }
-        .projects__data .dot-3 {
-          visibility: hidden; } }
-    @media only screen and (max-width: 364px) {
-      .projects__data .dot-2 {
-        visibility: hidden; }
-      .projects__data .dot-3 {
-        visibility: visible; } }
+        column-gap: 1.5rem; } }
   .projects__card {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -413,6 +397,12 @@ body {
     @media only screen and (max-width: 767px) {
       .projects__card {
         margin: 0 1.5rem; } }
+    @media only screen and (max-width: 700px) {
+      .projects__card {
+        grid-template-columns: 1fr 1fr; } }
+    @media only screen and (max-width: 482px) {
+      .projects__card {
+        grid-template-columns: 1fr; } }
   .projects__infocard {
     display: flex;
     justify-content: space-between;
@@ -460,9 +450,22 @@ body {
         font-size: 1.6rem;
         font-weight: 700; }
       .projects__infocard_progress progress {
-        height: 1.2rem;
-        width: 100%;
-        accent-color: #2ac9ff; }
+        position: relative;
+        height: 1rem;
+        width: 100%; }
+        .projects__infocard_progress progress::before, .projects__infocard_progress progress::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          border-radius: 20px; }
+        .projects__infocard_progress progress::before {
+          width: 100%;
+          background: rgba(128, 128, 128, 0.619); }
+        .projects__infocard_progress progress::after {
+          width: 90%;
+          background: #2ac9ff; }
       .projects__infocard_progress-percentage {
         align-self: flex-end;
         font-size: 1.8rem;
@@ -612,14 +615,14 @@ body {
             padding: 0.5rem 0.6rem; }
         .projects__infocard_border1 {
           height: 0.4rem;
-          width: 80%;
+          width: 82%;
           bottom: -1rem;
           left: 2.2rem; }
         .projects__infocard_border2 {
           height: 0.3rem;
-          width: 65%;
+          width: 72%;
           bottom: -1.8rem;
-          left: 4rem; } }
+          left: 3.5rem; } }
     @media only screen and (max-width: 1000px) {
       .projects__infocard_heading {
         padding: 1rem 2rem 0 2rem; }
@@ -675,25 +678,20 @@ body {
         width: 75%; } }
     @media only screen and (max-width: 767px) {
       .projects__infocard_border2 {
-        left: 4rem;
+        left: 3.8rem;
         bottom: -2rem;
         width: 75%; } }
     @media only screen and (max-width: 700px) {
-      .projects__infocard {
-        margin: 2rem 15rem;
-        height: 32rem; }
-        .projects__infocard_border1 {
-          width: 87%; }
-        .projects__infocard_border2 {
-          width: 80%; } }
-    @media only screen and (max-width: 600px) {
-      .projects__infocard {
-        margin: 2rem 10rem; } }
+      .projects__infocard_border1 {
+        width: 87%; }
+      .projects__infocard_border2 {
+        width: 80%; } }
     @media only screen and (max-width: 500px) {
+      .projects__infocard_border2 {
+        left: 3.6rem; } }
+    @media only screen and (max-width: 482px) {
       .projects__infocard {
-        margin: 2rem 7rem; }
-        .projects__infocard_border2 {
-          left: 3.6rem; } }
+        margin: 2rem 6rem; } }
     @media only screen and (max-width: 450px) {
       .projects__infocard {
         margin: 2rem 4rem; }
@@ -719,8 +717,11 @@ body {
       background-color: #fff; }
     .projects__infocard:nth-child(2) .border-hover {
       background-color: #fee4cb; }
-    .projects__infocard:nth-child(2) progress {
-      accent-color: #ff733a; }
+    .projects__infocard:nth-child(2) progress::before {
+      background: white; }
+    .projects__infocard:nth-child(2) progress::after {
+      width: 30%;
+      background: #ff733a; }
   .projects__infocard:nth-child(3) {
     background-color: #b9f2d1; }
     .projects__infocard:nth-child(3) .footer-icon {
@@ -730,8 +731,11 @@ body {
       background-color: #fff; }
     .projects__infocard:nth-child(3) .border-hover {
       background-color: #b9f2d1; }
-    .projects__infocard:nth-child(3) progress {
-      accent-color: #01cf53; }
+    .projects__infocard:nth-child(3) progress::before {
+      background: white; }
+    .projects__infocard:nth-child(3) progress::after {
+      width: 50%;
+      background: #01cf53; }
   .projects__infocard:nth-child(4) {
     background-color: #ffd3e2; }
     .projects__infocard:nth-child(4) .footer-icon {
@@ -741,8 +745,11 @@ body {
       background-color: #fff; }
     .projects__infocard:nth-child(4) .border-hover {
       background-color: #ffd3e2; }
-    .projects__infocard:nth-child(4) progress {
-      accent-color: #ff72ac; }
+    .projects__infocard:nth-child(4) progress::before {
+      background: white; }
+    .projects__infocard:nth-child(4) progress::after {
+      width: 20%;
+      background: #ff72ac; }
   .projects__infocard:nth-child(5) {
     background-color: #e9e7fd; }
     .projects__infocard:nth-child(5) .footer-icon {
@@ -752,8 +759,11 @@ body {
       background-color: #fff; }
     .projects__infocard:nth-child(5) .border-hover {
       background-color: #e9e7fd; }
-    .projects__infocard:nth-child(5) progress {
-      accent-color: #9187ff; }
+    .projects__infocard:nth-child(5) progress::before {
+      background: white; }
+    .projects__infocard:nth-child(5) progress::after {
+      width: 90%;
+      background: #9187ff; }
   .projects__infocard:nth-child(6) {
     background-color: #fee4cb; }
     .projects__infocard:nth-child(6) .footer-icon {
@@ -763,8 +773,11 @@ body {
       background-color: #fff; }
     .projects__infocard:nth-child(6) .border-hover {
       background-color: #fee4cb; }
-    .projects__infocard:nth-child(6) progress {
-      accent-color: #ff733a; }
+    .projects__infocard:nth-child(6) progress::before {
+      background: white; }
+    .projects__infocard:nth-child(6) progress::after {
+      width: 70%;
+      background: #ff733a; }
   @media only screen and (max-width: 700px) {
     .projects {
       grid-row: project-start / project-end;
