@@ -88,10 +88,13 @@ body {
       cursor: pointer; }
   .chats__person_info {
     font-size: 1.3rem;
-    line-height: 1.6rem; }
+    line-height: 1.6rem;
+    font-weight: 500; }
   .chats__person_date {
     font-size: 1.2rem;
-    align-self: flex-end; }
+    font-weight: 550;
+    align-self: flex-end;
+    color: #555454b4; }
   @media only screen and (max-width: 700px) {
     .chats {
       grid-row: chat-start / chat-end;
