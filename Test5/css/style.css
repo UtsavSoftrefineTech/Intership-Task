@@ -55,6 +55,8 @@ body {
       font-family: serif; }
     .chats__heading-icon {
       font-size: 2rem; }
+      .chats__heading-icon:hover {
+        cursor: pointer; }
   .chats__divider {
     height: 0.1rem;
     width: 100%;
@@ -161,6 +163,8 @@ body {
       border-radius: 50%;
       width: 100%;
       object-fit: cover; }
+      .header__profile-photo img:hover {
+        cursor: pointer; }
     .header__profile-text {
       font-size: 1.8rem;
       font-weight: 700;
@@ -202,7 +206,6 @@ body {
   background-color: white;
   display: flex;
   align-items: center;
-  justify-content: center;
   width: 40rem;
   height: 3rem;
   border-radius: 100px; }
@@ -223,6 +226,8 @@ body {
     display: flex;
     align-items: center;
     background-color: white; }
+    .search__button:hover {
+      cursor: pointer; }
   .search__icon {
     height: 1.5rem;
     width: 1.5rem;
@@ -264,7 +269,8 @@ body {
     .search {
       height: 3rem;
       width: 3rem;
-      border-radius: 100px; }
+      border-radius: 100px;
+      justify-content: center; }
       .search__input {
         display: none; }
       .search__icon {
@@ -300,6 +306,8 @@ body {
       font-size: 2.2rem; }
       .projects__information-logo ion-icon:first-child {
         padding-right: 0.5rem; }
+      .projects__information-logo ion-icon:hover {
+        cursor: pointer; }
     @media only screen and (max-width: 767px) {
       .projects__information-logo {
         display: flex; } }
