@@ -48,7 +48,8 @@ body {
     padding: 4.3rem 3rem 0 3rem;
     display: flex;
     align-items: center;
-    justify-content: space-between; }
+    justify-content: space-between;
+    margin-bottom: 2rem; }
     .chats__heading-text {
       font-size: 2.5rem;
       font-weight: 700; }
@@ -59,13 +60,12 @@ body {
   .chats__divider {
     height: 0.1rem;
     width: 100%;
-    background-color: gray;
-    margin: 2rem 0; }
+    background-color: gray; }
   .chats__info {
     display: flex;
     align-items: center;
     gap: 2rem;
-    margin: 0 3rem; }
+    padding: 2rem 3rem; }
   .chats__person_photo img {
     height: 5rem;
     width: 5rem;
@@ -101,12 +101,7 @@ body {
 
 .chat-effect:hover {
   cursor: pointer;
-  background-color: white;
-  border-radius: 10px;
-  margin: 0 2rem;
-  padding: 1.5rem 3rem;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  translate: 5px -10px; }
+  background-color: white; }
 
 .chat-scroll {
   overflow-x: hidden;
@@ -302,7 +297,7 @@ body {
   .projects__information {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 0 6rem; }
     .projects__information-logo {
       font-size: 2.2rem; }
@@ -310,9 +305,6 @@ body {
         padding-right: 0.5rem; }
       .projects__information-logo ion-icon:hover {
         cursor: pointer; }
-    @media only screen and (max-width: 767px) {
-      .projects__information-logo {
-        display: flex; } }
   .projects__data {
     display: flex;
     justify-content: flex-start;
@@ -476,7 +468,7 @@ body {
       padding: 1.5rem 2rem;
       margin: 1.5rem 0;
       justify-content: space-between;
-      border-top: 1px solid rgba(128, 128, 128, 0.345); }
+      border-top: 1px solid white; }
       .projects__infocard_footer-photo {
         height: 2.8rem;
         width: 2.8rem;
@@ -708,6 +700,8 @@ body {
         .projects__infocard_border2 {
           width: 78%;
           left: 3rem; } }
+  .projects__infocard:nth-child(1) .frist-border {
+    border-top: 1px solid rgba(128, 128, 128, 0.345); }
   .projects__infocard:nth-child(2) {
     background-color: #fee4cb; }
     .projects__infocard:nth-child(2) .footer-icon {

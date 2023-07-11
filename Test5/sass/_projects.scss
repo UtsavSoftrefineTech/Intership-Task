@@ -32,7 +32,7 @@
   &__information {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 0 6rem;
 
     &-logo {
@@ -43,12 +43,6 @@
       }
       & ion-icon:hover {
         cursor: pointer;
-      }
-    }
-
-    @media only screen and (max-width: 767px) {
-      &-logo {
-        display: flex;
       }
     }
   }
@@ -295,7 +289,7 @@
       margin: 1.5rem 0;
 
       justify-content: space-between;
-      border-top: 1px solid rgba(128, 128, 128, 0.345);
+      border-top: 1px solid white;
 
       &-photo {
         height: 2.8rem;
@@ -664,6 +658,12 @@
         width: 78%;
         left: 3rem;
       }
+    }
+  }
+
+  &__infocard:nth-child(1) {
+    .frist-border {
+      border-top: 1px solid rgba(128, 128, 128, 0.345);
     }
   }
 
